@@ -6,7 +6,7 @@ module.exports = {
   entry: {
     index: "./src/js/index.js",
     another: "./src/js/another.js",
-    hamburger: ".src/js/hamburger.js"
+    hamburger: "./src/js/hamburger.js"
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -55,32 +55,36 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/index.html",
       inject: true,
-      chunks: ["index", "hamburger"],
+      chunks: ["index"],
       filename: "index.html",
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/another.html",
       inject: true,
-      chunks: ["index", "another", "hamburger"],
+      chunks: ["index", "another"],
       filename: "another.html",
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/html.html",
       inject: true,
-      chunks: ["index", "hamburger"],
+      chunks: ["hamburger"],
       filename: "html.html",
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/css.html",
       inject: true,
-      chunks: ["index", "hamburger"],
+      chunks: ["hamburger"],
       filename: "css.html",
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/java-script.html",
       inject: true,
-      chunks: ["index", "hamburger"],
+      chunks: ["hamburger"],
       filename: "java-script.html",
     }),
   ],
 };
+function newFunction() {
+  return ".src/js/hamburger.js";
+}
+
