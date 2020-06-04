@@ -1,10 +1,3 @@
-import '../scss/main.scss';
-import '../scss/style.scss'
-
-/* place your code below */
-
-console.log('HELLO 🚀')
-
 const name = "Paweł";
 const place = "Jaworzno";
 const age = 34;

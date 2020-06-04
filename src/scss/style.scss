@@ -1,0 +1,369 @@
+@mixin ornament($radius, $background){
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: $background;
+  border-radius: $radius;
+  margin: 8px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.body {
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  display: grid;
+  grid-template-columns: 1fr, 8fr, 1f;
+  grid-template-areas:
+    "header header header"
+    ". main ."
+    ". footer .";
+}
+
+.article {
+  background: #eeeeee;
+  padding: 10px;
+  padding-bottom: 25px;
+  margin: 15px;
+  border: 1px #5b5b5b solid;
+  border-radius: 8px;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__code{
+    
+  }
+  &__description {
+    color: #222222;
+    text-align: justify;
+    align-self: flex-start;
+  }
+  &__navigation {
+    background: #fff;
+    border: 1px #555555 solid;
+    border-radius: 8px;
+    text-align: center;
+    position: sticky;
+    height: 40px;
+    width: 60px;
+    bottom: 50px;
+    color: #009fb7;
+    z-index: 100;
+    align-self: flex-end;
+  }
+  &__title {
+    background: #eeeeee;
+    padding: 10px;
+    color: #222222;
+    text-align: center;
+    border-radius: 8px;
+    &::before{
+      @include ornament(4px, blue);
+    }
+    &::after{
+      @include ornament(4px, blue);
+    }
+  }
+}
+
+.descriptionList {
+  margin: 0;
+  align-self: flex-start;
+  &__term {
+    margin-left: 10px;
+  }
+  &__details{
+    margin-left: 30px;
+  }
+}
+
+.footer {
+  background: #222222;
+  padding: 5px;
+  width: 100vw;
+  grid-area: footer;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  z-index: 200;
+  &__desciption {
+    color: #f9f9f9;
+    margin: 0;
+  }
+  &__link {
+    color: #009fb7;
+  }
+}
+
+.hamburger {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.header {
+  background: #222222;
+  grid-area: header;
+  min-height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 200;
+}
+
+.list {
+  align-self: flex-start;
+  margin: 0;
+  &__item {
+    color: #272727;
+    text-align: justify;
+  }
+}
+
+.main {
+  margin-top: 60px;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  &__description {
+    background: #f9f9f970;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #816115;
+    margin-top: 0;
+    margin-bottom: 15px;
+    width: 60vw;
+  }
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 80vw;
+  }
+  &__header{
+    background: #f9f9f970;
+    width: 60vw;
+    margin-top: 25px;
+    color: #d5a021;
+    text-align: center;
+    &::before{
+      @include ornament(50%, tomato);
+    }
+    &::after{
+      @include ornament(50%, tomato);
+    }
+  }
+  
+}
+
+.navigation {
+  padding: 16px;
+  display: none;
+  &__link {
+    margin: 16px;
+    display: block;
+    color: #ffffff;
+    &--homepage {
+      color: #009fb7;
+    }
+  }
+  &--open {
+    display: block;
+  }
+}
+
+.section {
+  border: 1px #5b5b5b solid;
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-bottom: 65px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  &__header {
+    color: #5b5b5b;
+    margin-top: 10px;
+    text-align: center;
+    &::before{
+      @include ornament(20px, green);
+    }
+    &::after{
+      @include ornament(20px, green);
+    }
+  }
+  &__description {
+    color: #5b5b5b;
+    text-align: justify;
+    padding: 10px 25px;
+    &--html {
+      width: 280px;
+      margin: 0 auto;
+      color: #5b5b5b;
+      text-align: center;
+    }
+  }
+  &__picture {
+    width: 60vw;
+    &--special {
+      width: 40vw;
+    }
+  }
+}
+
+.week {
+  background: #ffffff;
+  margin: 15px;
+  padding: 8px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 75vw;
+  &__heading {
+    background: #ffffff;
+    color: #222222;
+    text-align: center;
+    &::before{
+      @include ornament(16px, violet);
+    }
+    &::after{
+      @include ornament(16px, violet);
+    }
+  }
+  &__navigation {
+    background: #fff;
+    border: 1px #555555 solid;
+    border-radius: 8px;
+    margin-left: 0;
+    padding: 0px;
+    text-align: center;
+    position: sticky;
+    align-self: flex-end;
+    height: 40px;
+    width: 60px;
+    right: 0;
+    bottom: 65px;
+    color: #009fb7;
+    z-index: 100;
+  }
+}
+
+@media screen and (min-width: 379px) {
+  .week__navigation {
+    bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .article {
+    background: #eeeeee;
+    padding: 10px;
+    padding-bottom: 25px;
+    margin: 15px;
+    border: 1px #5b5b5b solid;
+    border-radius: 8px;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__description {
+      color: #222222;
+      text-align: justify;
+      align-self: flex-start;
+    }
+    &__navigation {
+      background: #fff;
+      border: 1px #555555 solid;
+      border-radius: 8px;
+      text-align: center;
+      position: sticky;
+      height: 40px;
+      width: 60px;
+      bottom: 50px;
+      color: #009fb7;
+      z-index: 100;
+      align-self: flex-end;
+    }
+    &__title {
+      background: #eeeeee;
+      padding: 10px;
+      color: #222222;
+      text-align: center;
+      border-radius: 8px;
+      &::before{
+        @include ornament(4px, blue);
+      }
+      &::after{
+        @include ornament(4px, blue);
+      }
+    }
+  }
+
+  .descriptionList {
+    padding: 0 25px;
+    margin: 0;
+    align-self: flex-start;
+    &__term {
+  
+    }
+    &__details{
+      
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .header {
+    background: #222222;
+    grid-area: header;
+  }
+
+  .navigation {
+    background: #222222;
+    padding: 16px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    &__link {
+      margin-right: 20px;
+      display: inline-block;
+      color: #ffffff;
+      &--homepage {
+        color: #009fb7;
+      }
+    }
+  }
+}

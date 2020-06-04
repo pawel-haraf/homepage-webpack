@@ -1,17 +1,350 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <title>O mnie</title>
   </head>
-  <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
-    </div>
+
+  <body class="body">
+    <header class="header">
+      <nav class="navigation navigation--js">
+        <a class="navigation__link navigation__link--homepage" href="index.html"
+          >Strona główna</a
+        >
+        <a class="navigation__link" href="html.html">O HTML</a>
+        <a class="navigation__link" href="css.html">O CSS</a>
+        <a class="navigation__link" href="java-script.html">O JavaScript'cie</a>
+      </nav>
+      <button class="hamburger hamburger--js">MENU</button>
+    </header>
+
+    <main class="main" id="main">
+      <header class="main__heading">
+        <h1 class="main__header">
+          Paweł Haraf<br />
+          Strona domowa
+        </h1>
+        <p class="main__description"></p>
+        <p class="main__description main__description--js"></p>
+        <p class="main__description main__description--js1"></p>
+      </header>
+
+      <section class="section">
+        <h2 class="section__header">O mnie</h2>
+        <p class="test">Witam <span class="test__special">SASS</span> na pokładzie :D</p>
+        <img
+          class="section__picture"
+          src="../assets/img/haraf-header.jpg"
+          alt="zdjęcie"
+        />
+        <p class="section__description">
+          To są moje pierwsze kroki w frontendzie. Do tej pory moja praca,
+          wogóle nie była z tym związana. Obecnie jestem sztygarem w ZG Sobieski
+          i mieszkam w Jaworznie. Obecnie dołączyłem do szkolenia WTF: Co ten
+          frontend prowadzonego przez Maćka Korsana. Będę tutaj zamieszczał
+          kolejne wpisy, w których będę informował o tym jakie robie postępy w
+          kursie. Mam nadzieję, że sam wygląd strony będzie się zmieniał.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section__header">
+          Notatki z WTF: Co ten frontend?
+        </h2>
+        <section class="week">
+          <h3 class="week__heading">Tydzień I 13.04.-19.04.2020 r.</h3>
+
+          <article class="article">
+            <h4 class="article__title">Pierwsze kroki</h4>
+            <p class="article__description">
+              No to zaczynamy przygodę z frontend'em. Co prawda nie jest to moja
+              pierwsza styczność z HTML'em, bo już w czasach liceum tworzyłem
+              stronkę dla rodziców. Była dość toporna i za bardzo nie wiedziałem
+              o co chodzi. Wszystko tworzyłem metodą prób i błędów, a gotowy
+              layout strony wziąłem z gazety CD Action, dołączali wtedy gotowe
+              na płycie. Zdjęcia i tekst już sam wklejałem.
+            </p>
+            <p class="article__description">
+              Pierwszy tydzień jest raczej dość spokojny. Można w nim spokojnie
+              zapoznać się z narzędziami jakie będą potrzebne, oraz strukturą
+              dokumentu HTML. Jest też trochę zabawy przykładową stroną. Przez
+              zmianę różnych elementów w jej kodzie, można podpatrzeć jak
+              funcjonują pewne rozwiązania w niej użyte.
+            </p>
+          </article>
+        </section>
+
+        <section class="week" id="week2">
+          <h3 class="week__heading">Tydzień II 20.04.-26.04.2020 r.</h3>
+
+          <article class="article">
+            <h4 class="article__title">Jak stworzyć prawidłowego HTLM'a?</h4>
+            <p class="article__description">
+              To jest właśnie pytanie, na które zaczynam poznawać odpowiedzi.
+              Drugi tydzień również jest rozgrzewkowy, ale pojawiają się już
+              ambitniejsze treści. Poznajemy już pewne zasady funckjonowania
+              strony internetowej oraz jak kolejne warstwy (czyli tekst, HTML,
+              CSS i JavaScript) wpływają na siebie. Poznajemy podstawową
+              strukturę HTLM, a także jak można edytować podstawowe elementy
+              wyglądu strony poprzez CSS. Dodatkowo odkrywamy, co łączy
+              programowanie z magią. Pozajemy również podstawowe zastasowanie
+              DevTools. Jako jedno z zadań jest rozwijana ta strona, którą
+              właśnie czytasz.
+            </p>
+          </article>
+
+          <article class="article">
+            <h4 class="article__title">Wartwy strony internetowej</h4>
+            <p class="article__description">
+              Zaczynamy od poznania poszczególnych warstw dokumentu. W jego
+              skład wchodzi:
+            </p>
+            <ul class="list">
+              <li class="list__item">Warstwa 0: Tekst.</li>
+              <li class="list__item">Warstwa 1: HTML.</li>
+              <li class="list__item">Warstwa 2: CSS.</li>
+              <li class="list__item">Warstwa 3: JavaScript</li>
+            </ul>
+            <p class="article__description">
+              Poszczególne warstwy mają wpływ na siebie. Na tekst (czyli
+              wszystko co się wyświetla w dokumencie, czyli dodatkowo obrazy,
+              linki, tabele itd.) mają wpływ inne warstwy. HTML nadaje strukturę
+              stronie. Stanowi jej szkielet. CSS odpowiada za wygląd. A w
+              JavaScript dodaje interaktywność do strony. HTML wpływa
+              bezpośrednio tylko na tekst, za to CSS już może wywierać wpływ na
+              kod HTML i tekst. JavaScript może wywołać najwięcej zamieszania.
+              Wpływać już może na: tekst, kod HTML i CSS.
+            </p>
+          </article>
+
+          <article class="article">
+            <h4 class="article__title">Dzień drugi II tygodnia 21.04.20 r.</h4>
+            <p class="article__description">
+              To właściwie pierwszy dzień, w którym tworzona jest strona. Mam
+              nadzieję, że przybierze ona trochę formę bloga i będę ją
+              uzupełniał codziennie. Zastanawiam się, jak sprawić, żeby nowe
+              wpisy pojawiały się jako pierwsze. Może trzeba będzie dodawać je,
+              przed istniejącymi wpisami. Ciekawe, czy kiedyś odkryję jak to
+              robić w sprytniejszy sposób.
+            </p>
+          </article>
+
+          <article class="article">
+            <h4 class="article__title">Dzień trzeci</h4>
+            <p class="article__description">
+              Już jest problem z doborem treści. Dzisiejszy dzień, poza tym
+              wpisem ograniczał się do przeglądania Slack'a. Pojawiają się tam
+              ciekawe informacje i tam widać, że mój poziom jest faktycznie
+              zero. Pokazują się już rozwiązane kolejne zadania, do których nie
+              moge się zabrać. Na razie nie mam na nie pomysłu.
+            </p>
+          </article>
+
+          <article class="article">
+            <h4 class="article__title">Dzień czwarty 26.04.2020 r.</h4>
+            <p class="article__description">
+              Faktycznie jest już niedziela. Czyli powinien być to siódmy w tym
+              dziennkiku szkolenie. Wkradła się już pierwsza niesystematyczność
+              :P Przysły tydzień ma być intensywniejszy i postaram się
+              codziennie bawić dziennikiem. Zobaczymy jak to wyjdzie
+            </p>
+          </article>
+
+          <a class="week__navigation" href="#week2">Do góry tygodnia</a>
+        </section>
+
+        <section class="week" id="week3">
+          <h3 class="week__heading">Tydzień III 27.04.-03.05.2020 r.</h3>
+
+          <article class="article">
+            <h4 class="article__title">Coraz dalej w las z Kanban'em :P</h4>
+            <p class="article__description">
+              Kolejny tydzień, to kolejne nowe rzeczy do nauki. Poznaliśmy
+              metodę do kotrolowania swoich postępów w pracy. Nazwa tej metody
+              to Kanban. Polega ona na umieszczaniu rzeczy do zrobienia w trzech
+              tabelach:
+            </p>
+            <ul class="list">
+              <li class="list__item">do zrobienia,</li>
+              <li class="list__item">w trakcie realizacji,</li>
+              <li class="list__item">zrobione/wykonane.</li>
+            </ul>
+            <p class="article__description">
+              Pozwala ona na bierzące śledzenie postępów w wykonywanym
+              projekcie/czynności, oraz zorientowaniu się co jest jeszcze do
+              zrobienia i co już zostało wykonane.
+            </p>
+          </article>
+
+          <article class="article">
+            <h4 class="article__title">HTML II</h4>
+            <p class="article__description">
+              Do podstaw, które poznaliśmy w poprzednim tygodniu dochodzą nowe
+              znaczniki. W tym sposób na podstawową organizację nawigacji na
+              stronie.
+            </p>
+          </article>
+
+          <article class="article">
+            <h4 class="article__title">Nadawanie nazw elementom</h4>
+            <p class="article__description">
+              Jest to jedna z najtrudniejszych czynności do wykonania. Żeby
+              wprowadzić porządek najlepiej stosować kilka prostych zasad:
+            </p>
+            <ul class="list">
+              <li class="list__item">nazwy bez polskich znaków,</li>
+              <li class="list__item">nie używamy spacji</li>
+              <li class="list__item">
+                najlepiej używać angielskich słów opisujących dany element,
+              </li>
+              <li class="list__item">
+                trzymamy się jednego już istniejącego w dokumencie schematu.
+              </li>
+            </ul>
+            <p class="article__description">
+              Dla wprowadzenia czytelności danej kilku wyrazowej nazwy zapisanej
+              bez spacji, można użyć jedne kilku istniejących konwencji zapisu:
+            </p>
+            <dl class="descriptionList">
+              <dt class="descriptionList__term">camelCase</dt>
+              <dd class="descriptionList__details">
+                pierwsze słowo z małej litery, a kolejne wyrazy bez spacji
+                zapisane są z dużej,
+              </dd>
+              <dt class="descriptionList__term">kebab-case</dt>
+              <dd class="descriptionList__details">
+                wszystkie wyrazy zapisujemy z małej litery, a oddzielamy je od
+                siebie za pomocą myślnika "-",
+              </dd>
+              <dt class="descriptionList__term">snake_case</dt>
+              <dd class="descriptionList__details">
+                wszystkie słowa zapisujemy z małej litery i oddzielamy je "_",
+              </dd>
+              <dt class="descriptionList__term">PascalCase</dt>
+              <dd class="descriptionList__details">
+                wszystkie słowa zapisujemy z dużej litery, bez spacji między
+                sobą.
+              </dd>
+            </dl>
+          </article>
+
+          <article class="article">
+            <h4 class="article__title">CSS II</h4>
+            <p class="article__description">
+              Sporo nowych informacji doszło do przyswojenia. Pierwszą z nich
+              było, że własności mogą być edytowane dla jednego elementu nie
+              tylko poprzez zapisanie nazwy tego elementu (np. p, h1, body) ale
+              również za pomocą identyfikatora (#id). Można zmienić własności
+              dla kilku elementów na raz poprzez pogrupowanie ich w klasy
+              (.class). Dowiedzieliśmy się jak łączyć selektory. Pojawiło się
+              również pojęcie specyficzności.
+            </p>
+          </article>
+
+          <article class="article">
+            <h4 class="article__title">Jak działa przeglądarka internetowa?</h4>
+            <p class="article__description">
+              Zrozumienie jak działa przeglądarka pozwala na łatwiejsze
+              opanowanie pisania kodu.
+            </p>
+          </article>
+
+          <article class="article">
+            <h4 class="article__title">javaScript</h4>
+            <p class="article__description">
+              Na pierwszy ogień poznaliśmy z czego składa się:
+            </p>
+            <ul class="list">
+              <li class="list__item">
+                Wartości - dla JS są tym czym liczby dla matematyki. Nie tworzy
+                ich, raczej sie do nich nawiązujemy.
+              </li>
+              <li class="list__item">Operacje porównania</li>
+              <li class="list__item">Literały</li>
+              <li class="list__item">Zmienne</li>
+              <li class="list__item">Obiekty</li>
+              <li class="list__item">Funkcje</li>
+            </ul>
+            <p class="article__description">
+              Poznaliśmy sposób w JS'ie zapisu:
+            </p>
+            <dl class="descriptionList">
+              <dt class="descriptionList__term">
+                Zmiennej:
+              </dt>
+              <dd class="descriptionList__details">
+                <code>const name='Paweł'</code>; - zmienna name: Paweł
+                <code> age=34</code>; - zmienna age o wartości 34
+              </dd>
+              <dt class="descriptionList__term">
+                Komendę wywołującą zapis w konsoli przeglądarki:
+              </dt>
+              <dd class="descriptionList__details">
+                <code>console.log(name)</code> - zwróci w konsoli wartość
+                zmiennej name czyli napis Paweł<br />
+                <code>console.log(age)</code> - zwróci w konsoli wartość
+                zmiennej age czyli 34
+              </dd>
+              <dt class="descriptionList__term">
+                Komendę alert, która wyświeli w osobnym okieny wyświetli
+                zdefiniowany komunikat:
+              </dt>
+              <dd class="descriptionList__details">
+                <code>alert('Hejka")</code> - wyświeli komunikat Hejka
+              </dd>
+              <dt class="descriptionList__term">
+                Specjalny sposób zapisu literału, czyli tekstu, w kórym
+                umieszczone są zmienne:
+              </dt>
+              <dd class="descriptionList__details">
+                <code
+                  >`Cześć :) Nazywam się ${name} i mam ${age} lat`); gdzie
+                  ${zmienna} to zapis odwołujący się do zmiennej.`</code
+                >
+              </dd>
+            </dl>
+          </article>
+
+          <a class="week__navigation" href="#week3">Do góry tygodnia</a>
+        </section>
+
+        <section class="week" id="week4">
+          <h3 class="week__heading">Tydzień IV 04.05-10.05.2020 r.</h3>
+
+          <article class="article">
+            <h4 class="article__title">Jest Git, a nawet gitHub :)</h4>
+            <p class="article__description">
+              Git to program do zarządzania rozwijanym projektem oraz system
+              kontroli wersji. Jest to narzędzie,dzięki któremu lepiej pracuje
+              się w grupie i łatwo śledzi się zmiany, ewentualnie je wracać do
+              wcześniejszej wersji. Umożliwia również rozdzielenie wersji i
+              rozwijanie dwóch różnych wariantów projektu, by na koniec móc
+              wybrać lepszą.
+            </p>
+            <p class="article__description">
+              Program Git możemy uruchomić w terminalu poprzez polecenie:
+              <em>git</em>. Musimy tylko pamiętać, żeby uruchomić Git'a w
+              katalogu z rozwijanym projektem.
+            </p>
+            <p class="article__description">
+              Przed pierwszym użyciem Git'a, trzeba go skonfigurować:
+            </p>
+            <ul class="list">
+              <li class="list__item"></li>
+            </ul>
+          </article>
+
+          <a class="week__navigation" href="#week4">Do góry tygodnia</a>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__desciption">
+        Mój pierwszy internetowy dziennik. Anno domini 2020 r.
+      </p>
+      <a class="footer__link" href="#main">Do góry strony</a>
+    </footer>
   </body>
 </html>

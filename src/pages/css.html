@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+  </head>
+
+  <body class="body">
+    <header class="header">
+      <nav class="navigation navigation--js">
+        <a class="navigation__link navigation__link--homepage" href="index.html"
+          >Strona główna</a
+        >
+        <a class="navigation__link" href="html.html">O HTML</a>
+        <a class="navigation__link" href="css.html">O CSS</a>
+        <a class="navigation__link" href="java-script.html">O JavaScript'cie</a>
+      </nav>
+      <button class="hamburger hamburger--js">MENU</button>
+    </header>
+
+    <main class="main" id="main">
+      <header>
+        <h1 class="main__header main__header--html">CSS</h1>
+      </header>
+
+      <section class="section">
+        <h2 class="section__header section__header--notes">
+          Notatki z WTF: Co ten frontend?
+        </h2>
+        <p class="section__description section__description--html">
+          CSS czyli kaskadowy arkusz stylów (ang. Cascading Style Sheets)
+        </p>
+        <img
+          class="section__picture section__picture--special"
+          src="../assets/img/css.png"
+          alt="logo"
+        />
+
+        <article class="article">
+          <h3 class="article__title" id="week2">
+            Tydzień II 20.04.-26.04.2020 r.
+          </h3>
+          <p class="article__description">
+            W tym tygodniu poznaliśmy, że CSS odpowiada za prezentacje
+            dokumentu. Tag <code>&lt;style&gt;</code>, który odpowiada za CSS
+            umieszczamy w sekcji <code>&lt;head&gt;</code>. Innym sposobem jest
+            przeniesienie CSS do innego pliku. Ma to na celu zwiększenie
+            przejrzystości kodu w dokumencie. Możemy to zapisać za pomocą
+            komendy:
+          </p>
+          <code
+            >&lt;link href="style.css" rel="stylesheet"
+            type="text/css"&gt;</code
+          >
+          <dl class="descriptionList">
+            <dt class="descriptionList__item"><code>&lt;link&gt;</code></dt>
+            <dd class="descriptionList__details">
+              komenda przesyła dokument po jakieś źródło do innego pliku np. jak
+              w naszym przypadku po arkusz stylów CSS. Również zamieszczamy tą
+              komendę w sekcji <code>&lt;head&gt;</code>
+            </dd>
+          </dl>
+          <p class="article__description">
+            Dane własności, które chcemy zmienić w dokumencie poprzez CSS,
+            zapisujemy:
+          </p>
+          <code>
+            selector&lcub;<br />
+            właściwość: wartość;<br />
+            &rcub;
+          </code>
+          <p class="article__description">
+            Poznane właściwości w tym tygodniu to:
+          </p>
+          <dl class="descriptionList">
+            <dt class="descriptionList__item"><code>color</code>:</dt>
+            <dd class="descriptionList__details">zmienia kolor tekstu</dd>
+            <dt class="descriptionList__item"><code>background</code>:</dt>
+            <dd class="descriptionList__details">zmienia kolor tła</dd>
+          </dl>
+          <a class="article__navigation" href="#week2">Do góry tygodnia</a>
+        </article>
+
+        <article class="article" id="week3">
+          <h3 class="article__title">Tydzień III 27.04.-02.05.2020 r.</h3>
+          
+          <p class="article__description">
+            Wygląd dokumentu możemy zmieniać również poprzez atrybut style
+            umieszczony bezpośrednio w tagu. Nazywamy go stylem inline
+            (liniowy). Zapisujemy go w następujący sposób:
+          </p>
+
+          <code>&lt;znacznik style="właściwość: wartość;"&gt;treść&lt;/znacznik&gt;</code>
+          
+          <p class="article__description">Zmienianie własności CSS możliwe jest poprzez:</p>
+          
+          <dl class="descriptionList">
+            <dt class="descriptionList__item">klasy (.class)</dt>
+            <dd class="descriptionList__details"><p><code>&lt;znacznik class="name"&gt;treść&lt;/znacznik&gt;</code></p>
+              <p><code>
+                .name&lcub;<br />
+                właściwość: wartość;<br />
+                &rcub;
+              </code></p>
+              <p>
+                Takich samych klas możemy używać dla różnych znaczników i każdy
+                z nich będzie miał takie same właściwości.
+              </p>
+            </dd>
+            <dt class="descriptionList__item">identyfikator (#id)</dt>
+            <dd class="descriptionList__details"><p><code>&lt;znacznik id="name"&gt;treść&lt;/znacznik&gt;</code></p>
+              <p><code>
+                #name&lcub;<br />
+                właściwość: wartość;<br />
+                &rcub;
+              </code></p>
+              <p>
+                Identyfikator możemy użyć dla jednego konkretnego znacznika. Nie
+                powinien odnosić się do innych znaczników.
+              </p>
+            </dd>
+          </dl>
+
+          <p class="article__description">
+            Jeśli chcemy zmienić właściwości danego elementu strony bez
+            nadawania mu klasy lub identyfikatora (np. chcemy żeby odnośniki w
+            <code>&lt;nav&gt;</code> były innego koloru niż na reszcie strony) to możemy
+            łączyć selektory. Możemy to zapisać:
+          </p>
+          
+          <code>
+            nav a&lcub;<br />
+            właściwość: wartość;<br />
+            &rcub;
+          </code>
+          
+          <p class="article__description">
+            Dzięki temu będzie możliwe zmienienie koloru odnośników <code>&lt;a&gt</code>;
+            tylko w nawigacji <code>&lt;nav&gt</code>;
+          </p>
+          <p class="article__description">
+            Kiedy do wartości dla danego selektora dopiszemy po spacji
+            !important, spowodujemy, że będzie ona stosowana jako pierwsza pod
+            uwagę.
+          </p>
+          <p>
+            <strong>Specyficzność w CSS</strong> definiuje co będzie pierwsze
+            użyte (ważność) jeśli do danego elementu może się odwoływać kilka
+            selektorów. Przedstawia się ona w następujący sposób:
+          </p>
+          <ol class="list">
+            <li class="list__item">!important</li>
+            <li class="list__item">style=""</li>
+            <li class="list__item">#id</li>
+            <li class="list__item">.name</li>
+            <li class="list__item">element</li>
+          </ol>
+          <p class="article__description">
+            Żeby uniknąć problemów, z specyficznością stylów najlepiej stosować
+            klasy. Unikniemy wtedy potrzebę przeliczania, żeby dowiedzieć się
+            jaki styl otrzyma dany element
+          </p>
+          <a class="article__navigation" href="#week3">Do góry tygodnia</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__desciption">
+        Mój pierwszy internetowy dziennik. Anno domini 2020 r.
+      </p>
+      <a class="footer__link" href="#main">Do góry strony</a>
+    </footer>
+  </body>
+</html>

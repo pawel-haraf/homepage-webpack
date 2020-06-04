@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML</title>
+  </head>
+
+  <body class="body">
+    <header class="header">
+      <nav class="navigation navigation--js">
+        <a class="navigation__link navigation__link--homepage" href="index.html"
+          >Strona główna</a
+        >
+        <a class="navigation__link" href="html.html">O HTML</a>
+        <a class="navigation__link" href="css.html">O CSS</a>
+        <a class="navigation__link" href="java-script.html">O JavaScript'cie</a>
+      </nav>
+      <button class="hamburger hamburger--js">MENU</button>
+    </header>
+
+    <main class="main" id="main">
+      <header>
+        <h1 class="main__header main__header--html">HTML 5</h1>
+      </header>
+
+      <section class="section">
+        <h2 class="section__header">Notatki z WTF: Co ten frontend?</h2>
+        <p class="section__description section__description--html">
+          HTML czyli HyperText Markup Language
+        </p>
+        <img
+          class="section__picture section__picture--special"
+          src="../assets/img/html5.png"
+          alt="HTLM"
+        />
+
+        <article class="article" id="week2">
+          <h3 class="article__title">Tydzień II 20.04-26.04.2020 r.</h3>
+          <p class="article__description">
+            Teraz obowiązująca wersja to HTML 5.2 (stan na 26.04.2020 r.).
+            Odpowiada za strukturę dokumentu. Informuje przegladarkę jak
+            przedstawiać tekst i jak go interpretować. Składnia CSS to reguły.
+          </p>
+          <p class="article__description">
+            Budowa reguły prezentuje się w następujący sposób:
+          </p>
+          <code class="article__code">
+            &lt;znacznik atrybut="wartość"&gt; treść &lt;/znacznik&gt;
+          </code>
+          <p class="article__description">Podstawowe znaczniki to:</p>
+          <dl class="descriptionList">
+            <dt class="descriptionList__term"><code>&lt;main&gt;</code></dt>
+            <dd class="descriptionList__details">
+              czyli część główna dokumentu
+            </dd>
+            <dt class="descriptionList__term"><code>&lt;section&gt;</code></dt>
+            <dd class="descriptionList__details">sekcja dekumentu</dd>
+            <dt class="descriptionList__term"><code>&lt;article&gt;</code></dt>
+            <dd class="descriptionList__details">
+              samodzielne treści dokumentu
+            </dd>
+            <dt class="descriptionList__term"><code>&lt;header&gt;</code></dt>
+            <dd class="descriptionList__details">nagłówek dokumentu</dd>
+            <dt class="descriptionList__term"><code>&lt;footer&gt;</code></dt>
+            <dd class="descriptionList__details">stopka dokumentu</dd>
+            <dt class="descriptionList__term"><code>&lt;h1-h6&gt;</code></dt>
+            <dd class="descriptionList__details">
+              Tekstowe nagłówki dokumentu
+            </dd>
+            <dt class="descriptionList__term"><code>&lt;p&gt;</code></dt>
+            <dd class="descriptionList__details">paragraf</dd>
+          </dl>
+          <p class="article__description">Ważne uwagi do zapamiętania:</p>
+          <ul class="list">
+            <li class="list__item">
+              sekcje zawsze muszą mieć nagłówek tekstowy
+            </li>
+            <li class="list__item">
+              nie używamy JS do czegoś co można zrobić w HTML'u
+            </li>
+          </ul>
+          <a class="article__navigation" href="#week2">Do góry tygodnia</a>
+        </article>
+
+        <article class="article" id="week3">
+          <h3 class="article__title">Tydzień III 27.04-02.05.2020 r.</h3>
+          <p class="article__description">
+            W tym tygodniu poznaliśmy znaczniki:
+          </p>
+          <dl class="descriptionList">
+            <dt class="descriptionList__term"><code>&lt;br&gt;</code></dt>
+            <dd class="descriptionList__details">
+              nowa linia w akapicie. Nie stawiamy kilku tych znaczników pod
+              rząd. Lepiej większy odstęp uzyskać inną techniką, np. poprzez
+              nowy akapit <code>&lt;p&gt;</code>
+            </dd>
+            <dt class="descriptionList__term"><code>&lt;b&gt;</code></dt>
+            <dd class="descriptionList__details">
+              ogrubienie tekstu - nie ma znaczenia semantycznego
+            </dd>
+            <dt class="descriptionList__term"><code>&lt;strong&gt;</code></dt>
+            <dd class="descriptionList__details">
+              pogrubienie - podkreśla wysoką istotność i poważność frazy w nim
+              zawartej. Ma znaczenie semantyczne.
+            </dd>
+            <dt class="descriptionList__term"><code>&lt;i&gt;</code></dt>
+            <dd class="descriptionList__details">
+              pochyla tekst - nie ma znaczenia semantycznego
+            </dd>
+            <dt class="descriptionList__term"><code>&lt;em&gt;</code></dt>
+            <dd class="descriptionList__details">
+              pochylenie - podkreśla, że tekst może mieć inne znaczenie (np.
+              ironia)
+            </dd>
+            <dt class="descriptionList__term"><code>&lt;a&gt;</code></dt>
+            <dd class="descriptionList__details">
+              link/łącze wewnątrz dokumentu
+              <code>&lt;a href="link-do-strony"&gt;opis łącza&lt;/a&gt;</code>
+            </dd>
+            <dt class="descriptionList__term">
+              <code>&lt;element id='moj-identyfikator'&gt;</code>
+            </dt>
+            <dd class="descriptionList__details">
+              atrybut id - identyfikuje element(przydaje się w nawigacji
+              dokumentu, lub dowołaniu CSS do tego konkretnego elementu). Żeby
+              odwołać się w nawigacji do tego elementu wpisujemy:
+              <code
+                >&lt;a href="#moj-identyfikator"&gt;opis
+                elementu&lt;/a&gt;</code
+              >
+            </dd>
+            <dt class="descriptionList__term"><code>&lt;nav&gt;</code></dt>
+            <dd class="descriptionList__details">
+              Nawigacja:Każdą treść, która jest powtarzalna na każdej
+              podstronie, wyrzucamy poza <code>&lt;main&gt;</code> (np. tag
+              <code>&lt;nav&gt;</code>). Wtedy algorytmy wyszukiwarek, czytników
+              wiedzą, że nie muszą tego analizować.
+            </dd>
+            <dt class="descriptionList__term"><code>&lt;img&gt;</code></dt>
+            <dd class="descriptionList__details">
+              obrazek:
+              <code>&lt;img src="link_do_obrazka" alt="tekst"&gt;</code>
+              atrybut alt oznacza informacje dla czytnika, wyszukiwarki co na na
+              danym obrazku się znajduje. Informuje również o tym odbiorce,
+              jeśli z jakiegoś powody ten obrazek by się nie wczytał.
+            </dd>
+          </dl>
+          <a class="article__navigation" href="#week3">Do góry tygodnia</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__desciption">
+        Mój pierwszy internetowy dziennik. Anno domini 2020 r.
+      </p>
+      <a class="footer__link" href="#main">Do góry strony</a>
+    </footer>
+  </body>
+</html>
