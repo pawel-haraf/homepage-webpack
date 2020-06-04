@@ -1,3 +1,6 @@
+import '../scss/main.scss';
+import '../scss/style.scss'
+
 const hamburger = document.querySelector('.hamburger--js');
 
 hamburger.addEventListener('click', () =>{

@@ -18,8 +18,8 @@ description.innerHTML =
 
 function greet(name, age) {
   console.log(
-    `Kolejne powitanie na mojej stronie!! 
-    Nazywam się ${name} i mam ${age} lata. 
+    `Kolejne powitanie na mojej stronie!!
+    Nazywam się ${name} i mam ${age} lata.
     Wiadomość jest dopisana przez JS :P`
   );
 }
