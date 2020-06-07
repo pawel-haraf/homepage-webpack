@@ -23,7 +23,7 @@ html {
   display: grid;
   grid-template-columns: 1fr, 8fr, 1f;
   grid-template-areas:
-    "header header header"
+  "header header header"
     ". main ."
     ". footer .";
 }
@@ -35,13 +35,14 @@ html {
   margin: 15px;
   border: 1px #5b5b5b solid;
   border-radius: 8px;
-  width: 70vw;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  align-items: start;
   &__code{
-    
+
   }
   &__description {
     color: #222222;
@@ -76,6 +77,13 @@ html {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .article {
+    width: 100%;
+  }
+}
+
+
 .descriptionList {
   margin: 0;
   align-self: flex-start;
@@ -84,6 +92,12 @@ html {
   }
   &__details{
     margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .descriptionList {
+    padding: 0 25px;
   }
 }
 
@@ -114,14 +128,25 @@ html {
   right: 16px;
 }
 
+@media screen and (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
 .header {
   background: #222222;
-  grid-area: header;
   min-height: 60px;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 200;
+}
+
+@media screen and (min-width: 769px) {
+  .header {
+    grid-area: header;
+  }
 }
 
 .list {
@@ -172,7 +197,7 @@ html {
       @include ornament(50%, tomato);
     }
   }
-  
+
 }
 
 .navigation {
@@ -188,6 +213,30 @@ html {
   }
   &--open {
     display: block;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .navigation {
+    background: #222222;
+    padding: 16px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    &__link {
+      margin-right: 20px;
+      display: inline-block;
+      color: #ffffff;
+      &--homepage {
+        color: #009fb7;
+      }
+    }
   }
 }
 
@@ -237,11 +286,9 @@ html {
   margin: 15px;
   padding: 8px;
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  grid-gap: 1rem;
   width: 75vw;
   &__heading {
     background: #ffffff;
@@ -278,92 +325,3 @@ html {
   }
 }
 
-@media screen and (min-width: 769px) {
-  .article {
-    background: #eeeeee;
-    padding: 10px;
-    padding-bottom: 25px;
-    margin: 15px;
-    border: 1px #5b5b5b solid;
-    border-radius: 8px;
-    width: 70vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &__description {
-      color: #222222;
-      text-align: justify;
-      align-self: flex-start;
-    }
-    &__navigation {
-      background: #fff;
-      border: 1px #555555 solid;
-      border-radius: 8px;
-      text-align: center;
-      position: sticky;
-      height: 40px;
-      width: 60px;
-      bottom: 50px;
-      color: #009fb7;
-      z-index: 100;
-      align-self: flex-end;
-    }
-    &__title {
-      background: #eeeeee;
-      padding: 10px;
-      color: #222222;
-      text-align: center;
-      border-radius: 8px;
-      &::before{
-        @include ornament(4px, blue);
-      }
-      &::after{
-        @include ornament(4px, blue);
-      }
-    }
-  }
-
-  .descriptionList {
-    padding: 0 25px;
-    margin: 0;
-    align-self: flex-start;
-    &__term {
-  
-    }
-    &__details{
-      
-    }
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .header {
-    background: #222222;
-    grid-area: header;
-  }
-
-  .navigation {
-    background: #222222;
-    padding: 16px;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 200;
-    &__link {
-      margin-right: 20px;
-      display: inline-block;
-      color: #ffffff;
-      &--homepage {
-        color: #009fb7;
-      }
-    }
-  }
-}

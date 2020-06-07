@@ -1,5 +1,6 @@
 import '../scss/main.scss';
-import '../scss/style.scss'
+import '../scss/style.scss';
+import moment from 'moment';
 
 /* place your code below */
 
@@ -106,3 +107,24 @@ hamburger.addEventListener('click', () =>{
   const nav = document.querySelector('.navigation--js');
   nav.classList.toggle('navigation--open');
 })
+
+
+
+console.log (moment().startOf('day').fromNow());
+
+const now = `Strona została wygenerowana: ${moment().format('MMMM Do YYYY, h:mm:ss a')}`;
+
+const Myclock = document.querySelector('.time--js3');
+Myclock.innerHTML = now;
+
+const myMoment = moment().endOf('day').fromNow();
+
+function createDate(querySelectorContent, content) {
+  const element2 = document.querySelector(querySelectorContent);
+  element2.innerHTML = content;
+};
+
+const date = `Dzień kończy się: ${myMoment}.`;
+
+createDate(".time--js2", date);
+
