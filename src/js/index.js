@@ -112,7 +112,7 @@ hamburger.addEventListener('click', () =>{
 
 console.log (moment().startOf('day').fromNow());
 
-const now = `Strona została wygenerowana: ${moment().format('MMMM Do YYYY, h:mm:ss a')}`;
+const now = `Stronę odwiedziłeś o: ${moment().format('MMMM Do YYYY, h:mm:ss a')}`;
 
 const Myclock = document.querySelector('.time--js3');
 Myclock.innerHTML = now;
