@@ -1,8 +1,8 @@
-![cover](https://cotenfrontend.pl/img/cover.png)
+![cover](./src/assetts/img/img_20200617_194940.jpg)
 
-# Projekt homepage 
+# Projekt homepage
 
-To jest moja pierwsza testowa strona. Traktuję ją jako brudnopis i może być chaotyczna. zapisywane w niej jest wszystko co aktualnie omawiane jest w szkoleniu WTF: Co ten frontend. Prowadzone jest przez Maćka Korsana. Wykorzystuje 
+To jest moja pierwsza testowa strona. Traktuję ją jako brudnopis i może być chaotyczna. zapisywane w niej jest wszystko co aktualnie omawiane jest w szkoleniu WTF: Co ten frontend. Prowadzone jest przez Maćka Korsana. Wykorzystuje
 
 ## How to use it?
 
