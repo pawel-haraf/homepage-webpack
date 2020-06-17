@@ -1,4 +1,4 @@
-![cover]('src/assetts/img/img_20200617_194940.jpg')
+![cover](https://github.com/pawel-haraf/homepage-webpack/blob/master/src/assets/img/img_20200617_194940.jpg)
 
 # Projekt homepage
 
