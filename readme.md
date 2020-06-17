@@ -16,3 +16,26 @@ Click on `Use this template` button to generate a new repository based on this s
 
 `npm run publish` - runs build process and publish the page using `gh-pages` branch
 
+## Co nowego?
+
+### Tydzień I
+
+W pierwszym tygodniu:
+1. Dowiadujemy się czym właściwie jest frontend
+2. Poznajemy narzędzia, z htórych będziemy korzystać.
+3. Scieżka rozwoju.
+4. Konfiguracja katalogów (środowiska) w różnych systemach operacyjnych.
+5. Wprowadzimy pierwsze zmiany w przykładowym projekcie.
+
+### Tydzień II
+
+W drugim tygodniu:
+1. Poznajemy warstwy strony internetowej.
+2. Pierwsze informacje o kodzie HTML.
+3. Poznajemy style CSS.
+4. Czym jest programowanie?
+5. Narzędzia DevTools.
+6. Prace domowe.
+
+###
+
