@@ -1,4 +1,4 @@
-![cover](src/assetts/img/img_20200617_194940.jpg)
+![cover]('src/assetts/img/img_20200617_194940.jpg')
 
 # Projekt homepage
 
