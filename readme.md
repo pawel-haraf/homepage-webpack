@@ -37,5 +37,10 @@ W drugim tygodniu:
 5. Narzędzia DevTools.
 6. Prace domowe.
 
-###
+### Tydzień III
+
+W trzecim tygodniu poznajemy:
+1. Planowanie pracy metodą Kanban.
+2. Atrybuty w HTML'u.
+3.
 
