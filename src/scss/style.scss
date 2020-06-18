@@ -83,6 +83,38 @@ html {
   }
 }
 
+.article-section {
+  background: #eeeeee;
+  padding: 10px;
+  padding-bottom: 25px;
+  margin: 15px;
+  border: 1px #5b5b5b solid;
+  border-radius: 8px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: start;
+  &__description {
+    color: #222222;
+    text-align: justify;
+    align-self: flex-start;
+  }
+  &__title{
+    background: #eeeeee;
+    padding: 10px;
+    color: #222222;
+    text-align: center;
+    border-radius: 8px;
+    &::before{
+      @include ornament(4px, blue);
+    }
+    &::after{
+      @include ornament(4px, blue);
+    }
+  }
+}
 
 .descriptionList {
   margin: 0;

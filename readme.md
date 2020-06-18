@@ -44,7 +44,7 @@ W trzecim tygodniu poznajemy:
 2. Atrybuty w HTML'u.
 3. Klase CSS.
 4. Jak działa przeglądarka.
-5. Wprowadzenie do JavaScript. 
+5. Wprowadzenie do JavaScript.
 6. Jak posługiwać się terminalem - podstawy.
 
 ### Tydzień IV

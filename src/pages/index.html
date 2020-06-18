@@ -34,7 +34,9 @@
 
       <section class="section">
         <h2 class="section__header">O mnie</h2>
-        <p class="test">Witam <span class="test__special">SASS</span> na pokładzie :D</p>
+        <p class="test">
+          Witam <span class="test__special">SASS</span> na pokładzie :D
+        </p>
         <img
           class="section__picture"
           src="../assets/img/haraf-header.jpg"
@@ -152,8 +154,6 @@
               codziennie bawić dziennikiem. Zobaczymy jak to wyjdzie
             </p>
           </article>
-
-          <a class="week__navigation" href="#week2">Do góry tygodnia</a>
         </section>
 
         <section class="week" id="week3">
@@ -307,8 +307,6 @@
               </dd>
             </dl>
           </article>
-
-          <a class="week__navigation" href="#week3">Do góry tygodnia</a>
         </section>
 
         <section class="week" id="week4">
@@ -337,7 +335,323 @@
             </ul>
           </article>
 
-          <a class="week__navigation" href="#week4">Do góry tygodnia</a>
+          <article>
+            <h4 class="article__title">Życie w pudełku</h4>
+            <section class="article-section">
+              <h5 class="article-section__title">Display</h5>
+              <p class="article-section__description">
+                Strony internetowe są tworzone dla dwu wymiarowych wyświetlaczy.
+                Co się z tym wiąże, to sposób projektowania strony. Na początek
+                poznajemy własność:
+              </p>
+              <dl class="descriptionList">
+                <dt class="descriptionList__term">
+                  display: block
+                </dt>
+                <dd class="descriptionList__details">
+                  elementy ustawiają się jeden pod drugim,
+                </dd>
+                <dt class="descriptionList__term">
+                  display: inline
+                </dt>
+                <dd class="descriptionList__details">
+                  elementy ustaiwają się obok siebie. Nie mogą mieć
+                  zdefiniowanej wysokości i szerokości,
+                </dd>
+                <dt class="descriptionList__term">
+                  display: inline-block
+                </dt>
+                <dd class="descriptionList__details">
+                  własność specjalna, łączy w sobie dwie rzeczy. Zachowuje się
+                  jak element liniowy, ale możemy nadawać im własności
+                  niedostępne elementom liniowym, a są dostępne dla elementów
+                  blokowych.
+                </dd>
+                <dt class="descriptionList__term">
+                  widht / height
+                </dt>
+                <dd class="descriptionList__details">
+                  szerokość / wysokość.
+                </dd>
+                <dt class="descriptionList__term">
+                  max-width / max-height
+                </dt>
+                <dd class="descriptionList__details">
+                  nie ma sztywnej wysokości / szerokości, tylko wymiar
+                  maksymalny.
+                </dd>
+                <dt class="descriptionList__term">
+                  min-width / min-height
+                </dt>
+                <dd class="descriptionList__details">
+                  element nie będzie mniejszy niż zadana wartość.
+                </dd>
+                <dt class="descriptionList__term">
+                  overflow: hidden
+                </dt>
+                <dd class="descriptionList__details">
+                  pozwala na odcięcie tej treści, która występuje poza wielkość
+                  kontenera. Odcięta treść nie będzie widoczna.
+                </dd>
+                <dt class="descriptionList__term">
+                  overflow: visible
+                </dt>
+                <dd class="descriptiomList__details">
+                  domyślna wartość, powoduje, że odcięta treść wystaje poza
+                  kontener i jest widoczna.
+                </dd>
+                <dt class="descriptionList__term">
+                  overflow: auto
+                </dt>
+                <dd class="descriptionList__details">
+                  dodaje nam scroll dzięki, któremu możemy przewijać zawartość
+                  kontenera. Po przewinięciu mamy dostęp do całego tekstu, a on
+                  nie wychodzi poza kontener.
+                </dd>
+              </dl>
+            </section>
+
+            <section class="article-section">
+              <h5 class="article-section__title">Jednostki</h5>
+              <p class="article-section__description">
+                Jednostki stosowane w własnościach CSS’owych to przede
+                wszystkim:
+              </p>
+              <ul class="list">
+                <li class="list__item">
+                  piksele (px) np. 600px,
+                </li>
+                <li class="list__item">
+                  procenty (%) np. 60%,
+                </li>
+              </ul>
+              <p class="article-section__description">
+                Ponieważ w forntendzie definiując szerokość i wysokość elementu
+                nie jesteśmy wstanie przewidzieć ilości treści i boxy muszą się
+                przesuwać to wprowadzono następujące jednostki:
+              </p>
+              <dl class="descriptionList">
+                <dt class="descriptionList__term">
+                  viewport width (vw)
+                </dt>
+                <dd class="descriptionList__details">
+                  określa szerokość elementu w procentach, względem całego okna
+                  np. 60vw,
+                </dd>
+                <dt class="descriptionList__term">
+                  viewport height (vh)
+                </dt>
+                <dd class="descriptionList__details">
+                  analogicznie jak dla wysokości.
+                </dd>
+              </dl>
+            </section>
+
+            <section class="article-section">
+              <h5 class="article-section__title">
+                Box Model – fundament budowy layout’u strony inernetowej.
+              </h5>
+              <dl class="descriptionList">
+                <dt class="descriptionList__term">
+                  padding
+                </dt>
+                <dd class="descriptionList__details">
+                  wewnętrzny margines – określa o ile zawartość ma być odsunięta
+                  od wewnętrznej granicy pudełka,
+                </dd>
+                <dt class="descriptionList__term">
+                  border
+                </dt>
+                <dd class="descriptionList__details">
+                  określa ramkę wokół elementu:
+                </dd>
+                <dt class="descriptionList__term">
+                  border-width:
+                </dt>
+                <dd class="descriptionList__details">
+                  szerokość ramki, o border-style: - rodzaj ramki (solid –
+                  ciągła, dashed – wykreskowana, dotted – wykropkowana),
+                </dd>
+                <dt class="descriptionList__term">
+                  border-radius: 10px;
+                </dt>
+                <dd class="descriptionList__details">
+                  własność pozwala na zaokrąglenie rami (obramowania) 10px
+                  określa promień zaokrąglenia. Jeśli wpiszemy 50%, to zrobimy
+                  koło z naszego elementu. Trzeba będzie tylko pamiętać, że
+                  treść będzie przycięta w takim elemencie i żeby tego uniknąć,
+                  możemy zastosować odpowiedniej wielkości padding.
+                </dd>
+                <dt class="descriptionList__term">
+                  margin
+                </dt>
+                <dd class="descriptionList__details">
+                  margines określa, o ile odsuwamy element od innych elementów i
+                  działa tylko przy elementach blokowych.
+                </dd>
+              </dl>
+            </section>
+
+            <section class="article-section">
+              <h5 class="article-section__title">Box-sizing</h5>
+              <dl class="descriptionList">
+                <dt class="descriptionList__term">
+                  box-sizing: content-box;
+                </dt>
+                <dd class="descriptionList__details">
+                  domyślna wielkość. Mowi ona nam, że jeśli zdefiniujemy sobie
+                  szerokość, to nie wpływa na nią padding, border, czyli jest
+                  tylko szerokością elementu. Z tego wynika, że cały box jest
+                  dużo szerszy,
+                </dd>
+                <dt class="descriptionList__term">
+                  box-sizing: border-box
+                </dt>
+                <dd class="descriptionList__details">
+                  przy takim zapisie szerokość i wysokość odnoszą się do całego
+                  boxa ( uwzględniając margines wewnętrzny oraz ramkę). Dzięki
+                  zastosowaniu tej własności, nie trzeba liczyć jaką wielkość ma
+                  mieć nasz element, żeby całość miała konkretny wymiar z
+                  uwzględnieniem ramki (czyli wszystkiego co należy do
+                  elementu).
+                </dd>
+              </dl>
+            </section>
+
+            <section class="article-section">
+              <h5 class="article-section__title">Position</h5>
+              <p class="article-section__description">
+                Positon – pozwala na pozycjonowanie elementów w naszej
+                przestrzeni nie tylko za pomocą narzuconych nam przez
+                przeglądarkę układom. Dzięki tej funkcji możemy powiedzieć
+                przeglądarce, że w tym i tym pikselu ma być ten element.
+                Domyślną wartością dla position jest static czyli
+              </p>
+              <dl class="descriptionList">
+                <dt class="descriptionList__term">
+                  position: relative;
+                </dt>
+                <dd class="descriptionList__details">
+                  element zależny od pozycji absolute,
+                </dd>
+                <dt class="descriptionList__term">
+                  position: absolute;
+                </dt>
+                <dd class="descriptionList__details">
+                  określa dokładne położenie elementu
+                </dd>
+                <dt class="descriptionList__term">
+                  position: fixed;
+                </dt>
+                <dd class="descriptionList__details">
+                  ma podobne właściwości jak absolute, tylko jest zawsze
+                  wyświetlany na tym samym miejscu, nawet jeśli przesuwamy
+                  stronę. Często stosowany jest dla strony,
+                </dd>
+                <dt class="descriptionList__term">
+                  position: sticky
+                </dt>
+                <dd class="descriptionList__details">
+                  element na oczątku jest na swoim miejscu, ale gdy scrollujemy
+                  (przewijamy) tekst, to element pozostaje w tym samym miejscu,
+                  aż do końca danej sekcji. Możemy go użyć jeśli chcemy żeby
+                  nagłówek był widoczny przez czas czytania artykułu (sekcji).Na
+                  początku nie zachodzi na tekst, dopiero później, przy
+                  przesuwaniu tekstu zajmuje stałe miejsce i przykrywa tekst
+                  przewijany, aż do końca sekcji.
+                </dd>
+              </dl>
+            </section>
+
+            <section class="article-section">
+              <h5 class="article-section__title">Float</h5>
+              <p class="article-section__description'">
+                Float służy do opływania elementów. Nie jest ograniczony, tzn.
+                jest zakotwiczony w treści.
+              </p>
+            </section>
+          </article>
+
+          <article class="article">
+            <h4 class="article__title">
+              JavaScript: Typy danych i immutability
+            </h4>
+            <section class="article-section">
+              <h5 class="article-section__title">Zmienne</h5>
+              <p class="article-section__description">
+                Zmienne to takie połączenie z naszym wszechświatem wartości.
+                Zmienna to nie wartość, ona tylko wskazuje nam jakąś wartość,
+                która istnieje. Wyróżniamy trzy rodzaje zapisu zmiennych w JS:
+                let, const, var.
+              </p>
+              <dl class="descriptionList">
+                <dt class="descriptionList__term">
+                  const
+                </dt>
+                <dd class="descriptionList__details">
+                  zmienne mające stałe połączenie z jedną wartością,
+                </dd>
+                <dt class="descriptionList__term">
+                  let
+                </dt>
+                <dd class="descriptionList__details">
+                  zmienne, których połączenie możemy przepisać, ale nazwę tej
+                  zmiennej definiujemy tylko raz.
+                </dd>
+              </dl>
+              <p class="article-section__description">
+                Trzeba pamiętać, że zmienne w JS są jak młody pelikan, „łykną”
+                wszystko. Dlatego trzeba uważać przy ich definiowaniu, żeby
+                czegoś nie nadpisać, lub wywołać jakiś konflikt.
+              </p>
+            </section>
+
+            <section class="article-section">
+              <h5 class="article-section__title">
+                Typy proste w JS (primitives)
+              </h5>
+              <p class="article-section__description">
+                Typy proste zależą od wartości przypisanej do danej zmiennej i
+                wyróżniamy:
+              </p>
+              <ul class="list">
+                <li class="list__item">
+                  string – tekst, otaczane ‘ lub „ (zalecane ‘),
+                </li>
+                <li class="list__item">
+                  numer – liczba,
+                </li>
+                <li class="list__item">
+                  bigint – duża liczba, większa niż 2<sup>53</sup>
+                </li>
+                <li class="list__item">
+                  boolean – true lub false,
+                </li>
+                <li class="list__item">
+                  null – wartość celowo niezdefiniowana,
+                </li>
+                <li class="list__item">
+                  undefined – brak definicji,
+                </li>
+                <li class="list__item"></li>
+              </ul>
+              <p class="article-section__description">
+                Polecenie typeof newName – zwraca nam jakiego typu jest
+          zmienna. Jeśli zmiennej y przypiszemy wartość zmiennej x, to po
+          zmianie wartości zmiennej x np. z 10 na 20 to dalej y będzie miało
+          wartość 10.
+              </p>
+            </section>
+
+            <section class="article-section">
+              <h5 class="article-section__title">Immutability (niezmienność)</h5>
+              <p class="article-section__description">
+                Nie możemy zmieniać wartości
+          primitive value w JS. To co możemy zmienić, to połączenie między nimi
+          a zmiennymi.
+              </p>
+            </section>
+          </article>
         </section>
       </section>
     </main>
