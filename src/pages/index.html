@@ -632,6 +632,79 @@
               zmienić, to połączenie między nimi a zmiennymi.
             </p>
           </article>
+
+          <article class="article">
+            <h4 class="article__title">BEM Block – Element – Modifier</h4>
+            <p class="article__description">Dlaczego stworzono BEM?</p>
+            <ul class="list">
+              <li class="list__item">
+                Świat stylowania doszedł do wysokiego stopnia skomplikowania
+                (specyficzność).
+              </li>
+              <li class="list__item">
+                Problem z logicznym nazwaniem klas.
+              </li>
+              <li class="list__item">
+                Brak ujednoliconego sposobu stylowania.
+              </li>
+              <li class="list__item">
+                Importanty, nadpisywanie rzeczy.
+              </li>
+              <li class="list__item">
+                Brak odwzorowania struktury HTML w CSS.
+              </li>
+              <li class="list__item">
+                Stylowanie kilkoma klasami, powtarzające się nazwy.
+              </li>
+            </ul>
+            <p class="article__description">
+              Dlatego:
+            </p>
+            <ul class="list">
+              <li class="list__item">
+                Szukamy elementów na stronie i dzielimy je na bloki (np.
+                nawigacje, artykuły).
+              </li>
+              <li class="list__item">
+                Myślimy o elementach składowych (robimy analizę, selekcję).
+              </li>
+              <li class="list__item">
+                Tworzymy dwie klasy jeśli element ma modyfikator (w
+                modyfikatorze zmieniamy tylko unikalne dla niego wartości, nie
+                przepisujemy rzeczy z klasy bazowej).
+              </li>
+            </ul>
+          </article>
+
+          <article class="article">
+            <h4 class="article__title">
+              DOM’owe przedszkole DOM czyli Document Object Model (Obiektowy
+              model dokumentu).
+            </h4>
+            <ul class="list">
+              <li class="list__item">
+                Dom to złożony w przeglądarce HTML, już po wszystkich zmianach
+                od JS.
+              </li>
+              <li class="list__item">
+                JavaScript może modyfikować DOM.
+              </li>
+              <li class="list__item">
+                Funkcja querySelector zwraca węzeł (node) z HTML’a, selktor
+                zapisywany zgodnie z CSS.
+              </li>
+              <li class="list__item">
+                Korzystając z BEM’a tworzymy dodatkową klasę z modyfikatorem –js
+                (ułatwia identyfikację i usuwa potencjalne problem).
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="week">
+          <h3 class="week__heading">Tydzień V 11.05.-17.05.2020 r.</h3>
+
+
         </section>
       </section>
     </main>
