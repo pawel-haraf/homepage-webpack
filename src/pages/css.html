@@ -37,11 +37,11 @@
           alt="logo"
         />
 
-        <article class="article">
-          <h3 class="article__title" id="week2">
+        <section class="week">
+          <h3 class="week__heading" id="week2">
             Tydzień II 20.04.-26.04.2020 r.
           </h3>
-          <p class="article__description">
+          <p class="week__description">
             W tym tygodniu poznaliśmy, że CSS odpowiada za prezentacje
             dokumentu. Tag <code>&lt;style&gt;</code>, który odpowiada za CSS
             umieszczamy w sekcji <code>&lt;head&gt;</code>. Innym sposobem jest
@@ -61,7 +61,7 @@
               komendę w sekcji <code>&lt;head&gt;</code>
             </dd>
           </dl>
-          <p class="article__description">
+          <p class="week__description">
             Dane własności, które chcemy zmienić w dokumencie poprzez CSS,
             zapisujemy:
           </p>
@@ -70,7 +70,7 @@
             właściwość: wartość;<br />
             &rcub;
           </code>
-          <p class="article__description">
+          <p class="week__description">
             Poznane właściwości w tym tygodniu to:
           </p>
           <dl class="descriptionList">
@@ -79,42 +79,56 @@
             <dt class="descriptionList__item"><code>background</code>:</dt>
             <dd class="descriptionList__details">zmienia kolor tła</dd>
           </dl>
-          <a class="article__navigation" href="#week2">Do góry tygodnia</a>
-        </article>
+        </section>
 
-        <article class="article" id="week3">
-          <h3 class="article__title">Tydzień III 27.04.-02.05.2020 r.</h3>
-          
-          <p class="article__description">
+        <section class="week" id="week3">
+          <h3 class="week__heading">Tydzień III 27.04.-02.05.2020 r.</h3>
+
+          <p class="week__description">
             Wygląd dokumentu możemy zmieniać również poprzez atrybut style
             umieszczony bezpośrednio w tagu. Nazywamy go stylem inline
             (liniowy). Zapisujemy go w następujący sposób:
           </p>
 
-          <code>&lt;znacznik style="właściwość: wartość;"&gt;treść&lt;/znacznik&gt;</code>
-          
-          <p class="article__description">Zmienianie własności CSS możliwe jest poprzez:</p>
-          
+          <code
+            >&lt;znacznik style="właściwość:
+            wartość;"&gt;treść&lt;/znacznik&gt;</code
+          >
+
+          <p class="week__description">
+            Zmienianie własności CSS możliwe jest poprzez:
+          </p>
+
           <dl class="descriptionList">
             <dt class="descriptionList__item">klasy (.class)</dt>
-            <dd class="descriptionList__details"><p><code>&lt;znacznik class="name"&gt;treść&lt;/znacznik&gt;</code></p>
-              <p><code>
-                .name&lcub;<br />
-                właściwość: wartość;<br />
-                &rcub;
-              </code></p>
+            <dd class="descriptionList__details">
+              <p>
+                <code>&lt;znacznik class="name"&gt;treść&lt;/znacznik&gt;</code>
+              </p>
+              <p>
+                <code>
+                  .name&lcub;<br />
+                  właściwość: wartość;<br />
+                  &rcub;
+                </code>
+              </p>
               <p>
                 Takich samych klas możemy używać dla różnych znaczników i każdy
                 z nich będzie miał takie same właściwości.
               </p>
             </dd>
             <dt class="descriptionList__item">identyfikator (#id)</dt>
-            <dd class="descriptionList__details"><p><code>&lt;znacznik id="name"&gt;treść&lt;/znacznik&gt;</code></p>
-              <p><code>
-                #name&lcub;<br />
-                właściwość: wartość;<br />
-                &rcub;
-              </code></p>
+            <dd class="descriptionList__details">
+              <p>
+                <code>&lt;znacznik id="name"&gt;treść&lt;/znacznik&gt;</code>
+              </p>
+              <p>
+                <code>
+                  #name&lcub;<br />
+                  właściwość: wartość;<br />
+                  &rcub;
+                </code>
+              </p>
               <p>
                 Identyfikator możemy użyć dla jednego konkretnego znacznika. Nie
                 powinien odnosić się do innych znaczników.
@@ -122,24 +136,24 @@
             </dd>
           </dl>
 
-          <p class="article__description">
+          <p class="week__description">
             Jeśli chcemy zmienić właściwości danego elementu strony bez
             nadawania mu klasy lub identyfikatora (np. chcemy żeby odnośniki w
-            <code>&lt;nav&gt;</code> były innego koloru niż na reszcie strony) to możemy
-            łączyć selektory. Możemy to zapisać:
+            <code>&lt;nav&gt;</code> były innego koloru niż na reszcie strony)
+            to możemy łączyć selektory. Możemy to zapisać:
           </p>
-          
+
           <code>
             nav a&lcub;<br />
             właściwość: wartość;<br />
             &rcub;
           </code>
-          
-          <p class="article__description">
-            Dzięki temu będzie możliwe zmienienie koloru odnośników <code>&lt;a&gt</code>;
-            tylko w nawigacji <code>&lt;nav&gt</code>;
+
+          <p class="week__description">
+            Dzięki temu będzie możliwe zmienienie koloru odnośników
+            <code>&lt;a&gt</code>; tylko w nawigacji <code>&lt;nav&gt</code>;
           </p>
-          <p class="article__description">
+          <p class="week__description">
             Kiedy do wartości dla danego selektora dopiszemy po spacji
             !important, spowodujemy, że będzie ona stosowana jako pierwsza pod
             uwagę.
@@ -156,13 +170,285 @@
             <li class="list__item">.name</li>
             <li class="list__item">element</li>
           </ol>
-          <p class="article__description">
+          <p class="week__description">
             Żeby uniknąć problemów, z specyficznością stylów najlepiej stosować
             klasy. Unikniemy wtedy potrzebę przeliczania, żeby dowiedzieć się
             jaki styl otrzyma dany element
           </p>
-          <a class="article__navigation" href="#week3">Do góry tygodnia</a>
-        </article>
+        </section>
+
+        <section class="week">
+          <h2 class="week__heading">
+            Tydzień IV 04.05.-10.05.2020 r.
+          </h2>
+          <article class="article">
+            <h4 class="article__title">Życie w pudełku</h4>
+            <p class="article__description">Display</p>
+            <p class="article__description">
+              Strony internetowe są tworzone dla dwu wymiarowych wyświetlaczy.
+              Co się z tym wiąże, to sposób projektowania strony. Na początek
+              poznajemy własność:
+            </p>
+            <dl class="descriptionList">
+              <dt class="descriptionList__term">
+                display: block
+              </dt>
+              <dd class="descriptionList__details">
+                elementy ustawiają się jeden pod drugim,
+              </dd>
+              <dt class="descriptionList__term">
+                display: inline
+              </dt>
+              <dd class="descriptionList__details">
+                elementy ustaiwają się obok siebie. Nie mogą mieć zdefiniowanej
+                wysokości i szerokości,
+              </dd>
+              <dt class="descriptionList__term">
+                display: inline-block
+              </dt>
+              <dd class="descriptionList__details">
+                własność specjalna, łączy w sobie dwie rzeczy. Zachowuje się jak
+                element liniowy, ale możemy nadawać im własności niedostępne
+                elementom liniowym, a są dostępne dla elementów blokowych.
+              </dd>
+              <dt class="descriptionList__term">
+                widht / height
+              </dt>
+              <dd class="descriptionList__details">
+                szerokość / wysokość.
+              </dd>
+              <dt class="descriptionList__term">
+                max-width / max-height
+              </dt>
+              <dd class="descriptionList__details">
+                nie ma sztywnej wysokości / szerokości, tylko wymiar maksymalny.
+              </dd>
+              <dt class="descriptionList__term">
+                min-width / min-height
+              </dt>
+              <dd class="descriptionList__details">
+                element nie będzie mniejszy niż zadana wartość.
+              </dd>
+              <dt class="descriptionList__term">
+                overflow: hidden
+              </dt>
+              <dd class="descriptionList__details">
+                pozwala na odcięcie tej treści, która występuje poza wielkość
+                kontenera. Odcięta treść nie będzie widoczna.
+              </dd>
+              <dt class="descriptionList__term">
+                overflow: visible
+              </dt>
+              <dd class="descriptiomList__details">
+                domyślna wartość, powoduje, że odcięta treść wystaje poza
+                kontener i jest widoczna.
+              </dd>
+              <dt class="descriptionList__term">
+                overflow: auto
+              </dt>
+              <dd class="descriptionList__details">
+                dodaje nam scroll dzięki, któremu możemy przewijać zawartość
+                kontenera. Po przewinięciu mamy dostęp do całego tekstu, a on
+                nie wychodzi poza kontener.
+              </dd>
+            </dl>
+
+            <p class="article__description">Jednostki</p>
+            <p class="article__description">
+              Jednostki stosowane w własnościach CSS’owych to przede wszystkim:
+            </p>
+            <ul class="list">
+              <li class="list__item">
+                piksele (px) np. 600px,
+              </li>
+              <li class="list__item">
+                procenty (%) np. 60%,
+              </li>
+            </ul>
+            <p class="article__description">
+              Ponieważ w forntendzie definiując szerokość i wysokość elementu
+              nie jesteśmy wstanie przewidzieć ilości treści i boxy muszą się
+              przesuwać to wprowadzono następujące jednostki:
+            </p>
+            <dl class="descriptionList">
+              <dt class="descriptionList__term">
+                viewport width (vw)
+              </dt>
+              <dd class="descriptionList__details">
+                określa szerokość elementu w procentach, względem całego okna
+                np. 60vw,
+              </dd>
+              <dt class="descriptionList__term">
+                viewport height (vh)
+              </dt>
+              <dd class="descriptionList__details">
+                analogicznie jak dla wysokości.
+              </dd>
+            </dl>
+
+            <p class="article__description">
+              Box Model – fundament budowy layout’u strony inernetowej.
+            </p>
+            <dl class="descriptionList">
+              <dt class="descriptionList__term">
+                padding
+              </dt>
+              <dd class="descriptionList__details">
+                wewnętrzny margines – określa o ile zawartość ma być odsunięta
+                od wewnętrznej granicy pudełka,
+              </dd>
+              <dt class="descriptionList__term">
+                border
+              </dt>
+              <dd class="descriptionList__details">
+                określa ramkę wokół elementu:
+              </dd>
+              <dt class="descriptionList__term">
+                border-width:
+              </dt>
+              <dd class="descriptionList__details">
+                szerokość ramki, o border-style: - rodzaj ramki (solid – ciągła,
+                dashed – wykreskowana, dotted – wykropkowana),
+              </dd>
+              <dt class="descriptionList__term">
+                border-radius: 10px;
+              </dt>
+              <dd class="descriptionList__details">
+                własność pozwala na zaokrąglenie rami (obramowania) 10px określa
+                promień zaokrąglenia. Jeśli wpiszemy 50%, to zrobimy koło z
+                naszego elementu. Trzeba będzie tylko pamiętać, że treść będzie
+                przycięta w takim elemencie i żeby tego uniknąć, możemy
+                zastosować odpowiedniej wielkości padding.
+              </dd>
+              <dt class="descriptionList__term">
+                margin
+              </dt>
+              <dd class="descriptionList__details">
+                margines określa, o ile odsuwamy element od innych elementów i
+                działa tylko przy elementach blokowych.
+              </dd>
+            </dl>
+
+            <p class="article__description">Box-sizing</p>
+            <dl class="descriptionList">
+              <dt class="descriptionList__term">
+                box-sizing: content-box;
+              </dt>
+              <dd class="descriptionList__details">
+                domyślna wielkość. Mowi ona nam, że jeśli zdefiniujemy sobie
+                szerokość, to nie wpływa na nią padding, border, czyli jest
+                tylko szerokością elementu. Z tego wynika, że cały box jest dużo
+                szerszy,
+              </dd>
+              <dt class="descriptionList__term">
+                box-sizing: border-box
+              </dt>
+              <dd class="descriptionList__details">
+                przy takim zapisie szerokość i wysokość odnoszą się do całego
+                boxa ( uwzględniając margines wewnętrzny oraz ramkę). Dzięki
+                zastosowaniu tej własności, nie trzeba liczyć jaką wielkość ma
+                mieć nasz element, żeby całość miała konkretny wymiar z
+                uwzględnieniem ramki (czyli wszystkiego co należy do elementu).
+              </dd>
+            </dl>
+
+            <p class="article__description">Position</p>
+            <p class="article__description">
+              Positon – pozwala na pozycjonowanie elementów w naszej przestrzeni
+              nie tylko za pomocą narzuconych nam przez przeglądarkę układom.
+              Dzięki tej funkcji możemy powiedzieć przeglądarce, że w tym i tym
+              pikselu ma być ten element. Domyślną wartością dla position jest
+              static czyli
+            </p>
+            <dl class="descriptionList">
+              <dt class="descriptionList__term">
+                position: relative;
+              </dt>
+              <dd class="descriptionList__details">
+                element zależny od pozycji absolute,
+              </dd>
+              <dt class="descriptionList__term">
+                position: absolute;
+              </dt>
+              <dd class="descriptionList__details">
+                określa dokładne położenie elementu
+              </dd>
+              <dt class="descriptionList__term">
+                position: fixed;
+              </dt>
+              <dd class="descriptionList__details">
+                ma podobne właściwości jak absolute, tylko jest zawsze
+                wyświetlany na tym samym miejscu, nawet jeśli przesuwamy stronę.
+                Często stosowany jest dla strony,
+              </dd>
+              <dt class="descriptionList__term">
+                position: sticky
+              </dt>
+              <dd class="descriptionList__details">
+                element na oczątku jest na swoim miejscu, ale gdy scrollujemy
+                (przewijamy) tekst, to element pozostaje w tym samym miejscu, aż
+                do końca danej sekcji. Możemy go użyć jeśli chcemy żeby nagłówek
+                był widoczny przez czas czytania artykułu (sekcji).Na początku
+                nie zachodzi na tekst, dopiero później, przy przesuwaniu tekstu
+                zajmuje stałe miejsce i przykrywa tekst przewijany, aż do końca
+                sekcji.
+              </dd>
+            </dl>
+
+            <p class="article__description">Float</p>
+            <p class="article__description">
+              Float służy do opływania elementów. Nie jest ograniczony, tzn.
+              jest zakotwiczony w treści.
+            </p>
+          </article>
+
+          <article class="article">
+            <h3 class="article__title">
+              BEM Block – Element – Modifier
+            </h3>
+            <p class="article__description">
+              Dlaczego stworzono BEM?
+            </p>
+            <ul class="list">
+              <li class="list__item">
+                Świat stylowania doszedł do wysokiego stopnia skomplikowania
+                (specyficzność).
+              </li>
+              <li class="list__item">
+                Problem z logicznym nazwaniem klas.
+              </li>
+              <li class="list__item">
+                Brak ujednoliconego sposobu stylowania.
+              </li>
+              <li class="list__item">
+                Importanty, nadpisywanie rzeczy.
+              </li>
+              <li class="list__item">
+                Brak odwzorowania struktury HTML w CSS.
+              </li>
+              <li class="list__item">
+                Stylowanie kilkoma klasami, powtarzające się nazwy.
+              </li>
+            </ul>
+            <p class="article__description">
+              Dlatego:
+            </p>
+            <ul class="list">
+              <li class="list__item">
+                Szukamy elementów na stronie i dzielimy je na bloki (np.
+                nawigacje, artykuły).
+              </li>
+              <li class="list__item">
+                Myślimy o elementach składowych (robimy analizę, selekcję).
+              </li>
+              <li class="list__item">
+                Tworzymy dwie klasy jeśli element ma modyfikator (w
+                modyfikatorze zmieniamy tylko unikalne dla niego wartości, nie
+                przepisujemy rzeczy z klasy bazowej).
+              </li>
+            </ul>
+          </article>
+        </section>
       </section>
     </main>
 
