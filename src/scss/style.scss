@@ -67,6 +67,7 @@ html {
     color: #222222;
     text-align: center;
     border-radius: 8px;
+    align-self: center;
     &::before {
       @include ornament(4px, blue);
     }
