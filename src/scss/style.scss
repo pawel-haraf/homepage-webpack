@@ -1,4 +1,4 @@
-@mixin ornament($radius, $background){
+@mixin ornament($radius, $background) {
   content: "";
   display: inline-block;
   width: 12px;
@@ -19,11 +19,11 @@ html {
 }
 
 .body {
-  background: #1D7874;
+  background: #1d7874;
   display: grid;
   grid-template-columns: 1fr, 8fr, 1f;
   grid-template-areas:
-  "header header header"
+    "header header header"
     ". main ."
     ". footer .";
 }
@@ -35,14 +35,13 @@ html {
   margin: 15px;
   border: 1px #5b5b5b solid;
   border-radius: 8px;
-  width: 90%;
+  width: 70vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: start;
-  &__code{
-
+  &__code {
   }
   &__description {
     color: #222222;
@@ -68,10 +67,10 @@ html {
     color: #222222;
     text-align: center;
     border-radius: 8px;
-    &::before{
+    &::before {
       @include ornament(4px, blue);
     }
-    &::after{
+    &::after {
       @include ornament(4px, blue);
     }
   }
@@ -79,10 +78,9 @@ html {
 
 @media screen and (min-width: 769px) {
   .article {
-    width: 100%;
+    width: 70%;
   }
 }
-
 
 .descriptionList {
   margin: 0;
@@ -90,7 +88,7 @@ html {
   &__term {
     margin-left: 10px;
   }
-  &__details{
+  &__details {
     margin-left: 30px;
   }
 }
@@ -184,20 +182,19 @@ html {
     align-content: center;
     width: 80vw;
   }
-  &__header{
+  &__header {
     background: #f9f9f970;
     width: 60vw;
     margin-top: 25px;
     color: #d5a021;
     text-align: center;
-    &::before{
+    &::before {
       @include ornament(50%, tomato);
     }
-    &::after{
+    &::after {
       @include ornament(50%, tomato);
     }
   }
-
 }
 
 .navigation {
@@ -255,10 +252,10 @@ html {
     color: #5b5b5b;
     margin-top: 10px;
     text-align: center;
-    &::before{
+    &::before {
       @include ornament(20px, green);
     }
-    &::after{
+    &::after {
       @include ornament(20px, green);
     }
   }
@@ -286,18 +283,19 @@ html {
   margin: 15px;
   padding: 8px;
   border-radius: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-  grid-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 75vw;
   &__heading {
     background: #ffffff;
     color: #222222;
     text-align: center;
-    &::before{
+    &::before {
       @include ornament(16px, violet);
     }
-    &::after{
+    &::after {
       @include ornament(16px, violet);
     }
   }
@@ -324,4 +322,3 @@ html {
     bottom: 50px;
   }
 }
-
