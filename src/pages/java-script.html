@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>javaScript</title>
-  </head>
 
-  <body class="body">
-    <header class="header">
-      <nav class="navigation navigation--js">
-        <a class="navigation__link navigation__link--homepage" href="index.html"
-          >Strona główna</a
-        >
-        <a class="navigation__link" href="html.html">O HTML</a>
-        <a class="navigation__link" href="css.html">O CSS</a>
-        <a class="navigation__link" href="java-script.html">O JavaScript'cie</a>
-      </nav>
-      <button class="hamburger hamburger--js">MENU</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>javaScript</title>
+</head>
+
+<body class="body">
+  <header class="header">
+    <nav class="navigation navigation--js">
+      <a class="navigation__link navigation__link--homepage" href="index.html">Strona główna</a>
+      <a class="navigation__link" href="html.html">O HTML</a>
+      <a class="navigation__link" href="css.html">O CSS</a>
+      <a class="navigation__link" href="java-script.html">O JavaScript'cie</a>
+    </nav>
+    <button class="hamburger hamburger--js">MENU</button>
+  </header>
+
+  <main class="main" id="main">
+    <header>
+      <h1 class="main__header">JavaScript</h1>
     </header>
 
-    <main class="main" id="main">
-      <header>
-        <h1 class="main__header">JavaScript</h1>
-      </header>
+    <section class="section">
+      <h2 class="section__header section__header--notes">
+        Notatki z WTF: Co ten frontend?
+      </h2>
+      <p class="section__description section__description--html">
+        Nauka javaScript'u
+      </p>
+      <img class="section__picture section__picture--special" src="../assets/img/js.png" alt="logo" />
+      <section class="week">
+        <h3 class="week__heading" id="week3">Tydzień III 27.04.-02.05.2020 r.</h3>
 
-      <section class="section">
-        <h2 class="section__header section__header--notes">
-          Notatki z WTF: Co ten frontend?
-        </h2>
-        <p class="section__description section__description--html">
-          Nauka javaScript'u
-        </p>
-        <img
-          class="section__picture section__picture--special"
-          src="../assets/img/js.png"
-          alt="logo"
-        />
         <article class="article">
-          <h3 class="article__title" id="week3">Tydzień III 27.04.-02.05.2020 r.</h3>
+          <h4 class="article__title">Wstęp do JavaScript'u</h4>
           <p class="article__description">
-            javaScript uruchamia się zaraz po załadowaniu strony. Na pierwszy
+            JavaScript uruchamia się zaraz po załadowaniu strony. Na pierwszy
             ogień poznaliśmy z czego składa się:
           </p>
           <ul class="list">
@@ -102,17 +100,105 @@
             </li>
             <li class="list__item">javaScript to frontend'owe programowanie</li>
           </ul>
-          <a class="article__navigation" href="#week3">Do góry tygodnia</a>
+        </article>
+
+      </section>
+
+      <section class="week">
+        <h3 class="week__heading"> Tydzień IV 04.05.-10.05.2020 r.</h3>
+        <article class="article">
+          <h4 class="article__title">JavaScript: Typy danych i immutability</h4>
+
+          <section class="article-section">
+            <h5 class="article-section__title"> Zmienne</h5>
+
+            <p class="article-section__desription">
+              Zmienne to takie połączenie z naszym wszechświatem wartości. Zmienna to nie wartość, ona tylko wskazuje
+              nam jakąś wartość, która istnieje. Wyróżniamy trzy rodzaje zapisu zmiennych w JS: let, const, var.
+            </p>
+
+            <ul class="list">
+              <li class="list__item">
+                const – zmienne mające stałe połączenie z jedną wartością,
+              </li>
+              <li class="list__item">
+                let – zmienne, których połączenie możemy przepisać, ale nazwę tej zmiennej definiujemy tylko raz.
+              </li>
+            </ul>
+
+            <p class="article-section__desription">
+              Trzeba pamiętać, że zmienne w JS są jak młody pelikan, „łykną” wszystko. Dlatego trzeba uważać przy ich
+              definiowaniu, żeby czegoś nie nadpisać, lub wywołać jakiś konflikt.
+            </p>
+          </section>
+
+          <section class="article-section">
+            <h5 class="article-section__title"> Typy proste w JS (primitives)</h5>
+
+            <p class="article-section__desription">
+              Typy proste zależą od wartości przypisanej do danej zmiennej i wyróżniamy:
+            </p>
+
+            <ul class="list">
+              <li class="list__item">
+                string – tekst, otaczane ‘ lub „ (zalecane ‘),
+              </li>
+
+              <li class="list__item">
+                numer – liczba,
+              </li>
+
+              <li class="list__item">
+                bigint – duża liczba, większa niż 253,
+              </li>
+
+              <li class="list__item">
+                boolean – true lub false,
+              </li>
+
+              <li class="list__item">
+                null – wartość celowo niezdefiniowana,
+              </li>
+
+              <li class="list__item">
+                undefined – brak definicji,
+              </li>
+
+              <li class="list__item">
+                *symbol – tworzy „unikalne opakowanie”.
+              </li>
+            </ul>
+
+            <p class="article-section__desription">
+              Polecenie <code>typeof newName</code> – zwraca nam jakiego typu jest zmienna newName.
+            </p>
+
+            <p class="article-section__desription">
+              Jeśli zmiennej y przypiszemy wartość zmiennej x, to po zmianie wartości zmiennej x np. z 10 na 20 to dalej
+              y będzie miało wartość 10.
+            </p>
+          </section>
+
+          <section class="article-section">
+            <h5 class="article-section__title">Immutability (niezmienność)</h5>
+
+            <p class="article-section__desription">
+              Nie możemy zmieniać wartości primitive value w JS. To co możemy zmienić, to połączenie między nimi a
+              zmiennymi.
+            </p>
+          </section>
         </article>
       </section>
-    </main>
+    </section>
+  </main>
 
-    <footer class="footer">
-      <p class="footer__desciption">
-        Mój pierwszy internetowy dziennik. Anno domini 2020 r.
-      </p>
-      <a class="footer__link" href="#main">Do góry strony</a>
-    </footer>
+  <footer class="footer">
+    <p class="footer__desciption">
+      Mój pierwszy internetowy dziennik. Anno domini 2020 r.
+    </p>
+    <a class="footer__link" href="#main">Do góry strony</a>
+  </footer>
 
-  </body>
+</body>
+
 </html>

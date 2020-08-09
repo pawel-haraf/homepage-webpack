@@ -1,161 +1,299 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML</title>
-  </head>
 
-  <body class="body">
-    <header class="header">
-      <nav class="navigation navigation--js">
-        <a class="navigation__link navigation__link--homepage" href="index.html"
-          >Strona główna</a
-        >
-        <a class="navigation__link" href="html.html">O HTML</a>
-        <a class="navigation__link" href="css.html">O CSS</a>
-        <a class="navigation__link" href="java-script.html">O JavaScript'cie</a>
-      </nav>
-      <button class="hamburger hamburger--js">MENU</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML</title>
+</head>
+
+<body class="body">
+  <header class="header">
+    <nav class="navigation navigation--js">
+      <a class="navigation__link navigation__link--homepage" href="index.html">Strona główna</a>
+      <a class="navigation__link" href="html.html">O HTML</a>
+      <a class="navigation__link" href="css.html">O CSS</a>
+      <a class="navigation__link" href="java-script.html">O JavaScript'cie</a>
+    </nav>
+    <button class="hamburger hamburger--js">MENU</button>
+  </header>
+
+  <main class="main" id="main">
+    <header>
+      <h1 class="main__header main__header--html">HTML 5</h1>
     </header>
 
-    <main class="main" id="main">
-      <header>
-        <h1 class="main__header main__header--html">HTML 5</h1>
-      </header>
+    <section class="section">
+      <h2 class="section__header">Notatki z WTF: Co ten frontend?</h2>
+      <p class="section__description section__description--html">
+        HTML czyli HyperText Markup Language
+      </p>
+      <img class="section__picture section__picture--special" src="../assets/img/html5.png" alt="HTLM" />
 
-      <section class="section">
-        <h2 class="section__header">Notatki z WTF: Co ten frontend?</h2>
-        <p class="section__description section__description--html">
-          HTML czyli HyperText Markup Language
+      <article class="article" id="week2">
+        <h3 class="article__title">Tydzień II 20.04-26.04.2020 r.</h3>
+        <p class="article__description">
+          Teraz obowiązująca wersja to HTML 5.2 (stan na 26.04.2020 r.).
+          Odpowiada za strukturę dokumentu. Informuje przegladarkę jak
+          przedstawiać tekst i jak go interpretować. Składnia CSS to reguły.
         </p>
-        <img
-          class="section__picture section__picture--special"
-          src="../assets/img/html5.png"
-          alt="HTLM"
-        />
-
-        <article class="article" id="week2">
-          <h3 class="article__title">Tydzień II 20.04-26.04.2020 r.</h3>
-          <p class="article__description">
-            Teraz obowiązująca wersja to HTML 5.2 (stan na 26.04.2020 r.).
-            Odpowiada za strukturę dokumentu. Informuje przegladarkę jak
-            przedstawiać tekst i jak go interpretować. Składnia CSS to reguły.
-          </p>
-          <p class="article__description">
-            Budowa reguły prezentuje się w następujący sposób:
-          </p>
-          <code class="article__code">
+        <p class="article__description">
+          Budowa reguły prezentuje się w następujący sposób:
+        </p>
+        <code class="article__code">
             &lt;znacznik atrybut="wartość"&gt; treść &lt;/znacznik&gt;
           </code>
-          <p class="article__description">Podstawowe znaczniki to:</p>
-          <dl class="descriptionList">
-            <dt class="descriptionList__term"><code>&lt;main&gt;</code></dt>
-            <dd class="descriptionList__details">
-              czyli część główna dokumentu
-            </dd>
-            <dt class="descriptionList__term"><code>&lt;section&gt;</code></dt>
-            <dd class="descriptionList__details">sekcja dekumentu</dd>
-            <dt class="descriptionList__term"><code>&lt;article&gt;</code></dt>
-            <dd class="descriptionList__details">
-              samodzielne treści dokumentu
-            </dd>
-            <dt class="descriptionList__term"><code>&lt;header&gt;</code></dt>
-            <dd class="descriptionList__details">nagłówek dokumentu</dd>
-            <dt class="descriptionList__term"><code>&lt;footer&gt;</code></dt>
-            <dd class="descriptionList__details">stopka dokumentu</dd>
-            <dt class="descriptionList__term"><code>&lt;h1-h6&gt;</code></dt>
-            <dd class="descriptionList__details">
-              Tekstowe nagłówki dokumentu
-            </dd>
-            <dt class="descriptionList__term"><code>&lt;p&gt;</code></dt>
-            <dd class="descriptionList__details">paragraf</dd>
-          </dl>
-          <p class="article__description">Ważne uwagi do zapamiętania:</p>
+        <p class="article__description">Podstawowe znaczniki to:</p>
+        <dl class="descriptionList">
+          <dt class="descriptionList__term"><code>&lt;main&gt;</code></dt>
+          <dd class="descriptionList__details">
+            czyli część główna dokumentu
+          </dd>
+          <dt class="descriptionList__term"><code>&lt;section&gt;</code></dt>
+          <dd class="descriptionList__details">sekcja dekumentu</dd>
+          <dt class="descriptionList__term"><code>&lt;article&gt;</code></dt>
+          <dd class="descriptionList__details">
+            samodzielne treści dokumentu
+          </dd>
+          <dt class="descriptionList__term"><code>&lt;header&gt;</code></dt>
+          <dd class="descriptionList__details">nagłówek dokumentu</dd>
+          <dt class="descriptionList__term"><code>&lt;footer&gt;</code></dt>
+          <dd class="descriptionList__details">stopka dokumentu</dd>
+          <dt class="descriptionList__term"><code>&lt;h1-h6&gt;</code></dt>
+          <dd class="descriptionList__details">
+            Tekstowe nagłówki dokumentu
+          </dd>
+          <dt class="descriptionList__term"><code>&lt;p&gt;</code></dt>
+          <dd class="descriptionList__details">paragraf</dd>
+        </dl>
+        <p class="article__description">Ważne uwagi do zapamiętania:</p>
+        <ul class="list">
+          <li class="list__item">
+            sekcje zawsze muszą mieć nagłówek tekstowy
+          </li>
+          <li class="list__item">
+            nie używamy JS do czegoś co można zrobić w HTML'u
+          </li>
+        </ul>
+        <a class="article__navigation" href="#week2">Do góry tygodnia</a>
+      </article>
+
+      <article class="article" id="week3">
+        <h3 class="article__title">Tydzień III 27.04-02.05.2020 r.</h3>
+        <p class="article__description">
+          W tym tygodniu poznaliśmy znaczniki:
+        </p>
+        <dl class="descriptionList">
+          <dt class="descriptionList__term"><code>&lt;br&gt;</code></dt>
+          <dd class="descriptionList__details">
+            nowa linia w akapicie. Nie stawiamy kilku tych znaczników pod
+            rząd. Lepiej większy odstęp uzyskać inną techniką, np. poprzez
+            nowy akapit <code>&lt;p&gt;</code>
+          </dd>
+          <dt class="descriptionList__term"><code>&lt;b&gt;</code></dt>
+          <dd class="descriptionList__details">
+            ogrubienie tekstu - nie ma znaczenia semantycznego
+          </dd>
+          <dt class="descriptionList__term"><code>&lt;strong&gt;</code></dt>
+          <dd class="descriptionList__details">
+            pogrubienie - podkreśla wysoką istotność i poważność frazy w nim
+            zawartej. Ma znaczenie semantyczne.
+          </dd>
+          <dt class="descriptionList__term"><code>&lt;i&gt;</code></dt>
+          <dd class="descriptionList__details">
+            pochyla tekst - nie ma znaczenia semantycznego
+          </dd>
+          <dt class="descriptionList__term"><code>&lt;em&gt;</code></dt>
+          <dd class="descriptionList__details">
+            pochylenie - podkreśla, że tekst może mieć inne znaczenie (np.
+            ironia)
+          </dd>
+          <dt class="descriptionList__term"><code>&lt;a&gt;</code></dt>
+          <dd class="descriptionList__details">
+            link/łącze wewnątrz dokumentu
+            <code>&lt;a href="link-do-strony"&gt;opis łącza&lt;/a&gt;</code>
+          </dd>
+          <dt class="descriptionList__term">
+            <code>&lt;element id='moj-identyfikator'&gt;</code>
+          </dt>
+          <dd class="descriptionList__details">
+            atrybut id - identyfikuje element(przydaje się w nawigacji
+            dokumentu, lub dowołaniu CSS do tego konkretnego elementu). Żeby
+            odwołać się w nawigacji do tego elementu wpisujemy:
+            <code>&lt;a href="#moj-identyfikator"&gt;opis
+                elementu&lt;/a&gt;</code>
+          </dd>
+          <dt class="descriptionList__term"><code>&lt;nav&gt;</code></dt>
+          <dd class="descriptionList__details">
+            Nawigacja:Każdą treść, która jest powtarzalna na każdej
+            podstronie, wyrzucamy poza <code>&lt;main&gt;</code> (np. tag
+            <code>&lt;nav&gt;</code>). Wtedy algorytmy wyszukiwarek, czytników
+            wiedzą, że nie muszą tego analizować.
+          </dd>
+          <dt class="descriptionList__term"><code>&lt;img&gt;</code></dt>
+          <dd class="descriptionList__details">
+            obrazek:
+            <code>&lt;img src="link_do_obrazka" alt="tekst"&gt;</code>
+            atrybut alt oznacza informacje dla czytnika, wyszukiwarki co na na
+            danym obrazku się znajduje. Informuje również o tym odbiorce,
+            jeśli z jakiegoś powody ten obrazek by się nie wczytał.
+          </dd>
+        </dl>
+        <a class="article__navigation" href="#week3">Do góry tygodnia</a>
+      </article>
+
+      <article class="article">
+        <h3 class="article__title">Tydzień V 11.05. – 17.05.20 r.</h3>
+
+
+        <section>
+          <h4>
+            HTML: listy, definicje.
+          </h4>
+
+          <p class="article__description">
+            Język HTML udostępnia trzy różne rodzaje list:
+          </p>
+
           <ul class="list">
             <li class="list__item">
-              sekcje zawsze muszą mieć nagłówek tekstowy
+              listy uporządkowane (unordered list) <code>&lt;ol&gt;</code>, czyli takie, których kolejne elementy
+              <code>&lt;li&gt;</code> są oznaczone liczbami,
             </li>
             <li class="list__item">
-              nie używamy JS do czegoś co można zrobić w HTML'u
+              listy nieuporządkowane (ordered list) <code>&lt;ul&gt;</code>, czyli takie, których poszczególne elementy
+              <code>&lt;li&gt;</code> są oznaczone znacznikami,
+            </li>
+            <li class="list__item">
+              listy definicji (description list) <code>&lt;dl&gt;</code> czyli takie, których kolejne elementy tworzone
+              są
+              przez pary składające się z terminu (description term) <code>&lt;dt&gt;</code> i jego opisu (description
+              details) <code>&lt;dd&gt;</code>.
             </li>
           </ul>
-          <a class="article__navigation" href="#week2">Do góry tygodnia</a>
-        </article>
 
-        <article class="article" id="week3">
-          <h3 class="article__title">Tydzień III 27.04-02.05.2020 r.</h3>
           <p class="article__description">
-            W tym tygodniu poznaliśmy znaczniki:
+            HTML umożliwia na zagnieżdżanie listy wewnątrz elementu. Przeglądarka wyświetla taką listę jako bardziej
+            wciętą:
           </p>
+
+          <p class="article__description article__description--special">
+            <code>
+              &lt;ul&gt;
+            </code>
+            <br>
+            <code class="code--special">
+              &lt;li&gt;element1&lt;/li&gt;
+            </code>
+            <br>
+            <code class="code--special">
+              &lt;li&gt;element2&lt;/li&gt;
+            </code>
+            <br>
+            <code class="code--special">
+              &lt;li&gt;element3
+            </code>
+            <br>
+            <code class="code--special2">
+              &lt;ul&gt;
+            </code>
+            <br>
+            <code class="code--special3">
+              &lt;li&gt;podelement1&lt;/li&gt;
+            </code>
+            <br>
+            <code class="code--special3">
+              &lt;li&gt;podelement2&lt;/li&gt;
+            </code>
+            <br>
+            <code class="code--special2">
+              &lt;/ul&gt;
+            </code>
+            <br>
+            <code class="code--special">
+              &lt;/li&gt;
+            </code>
+            <br>
+            <code>
+              &lt;/ul&gt;
+            </code>
+          </p>
+        </section>
+
+        <section>
+          <h4>
+            HTML: tabele
+          </h4>
+
+          <p class="article__description">
+            Do tworzenia tabel używamy znaczników:
+          </p>
+
           <dl class="descriptionList">
-            <dt class="descriptionList__term"><code>&lt;br&gt;</code></dt>
-            <dd class="descriptionList__details">
-              nowa linia w akapicie. Nie stawiamy kilku tych znaczników pod
-              rząd. Lepiej większy odstęp uzyskać inną techniką, np. poprzez
-              nowy akapit <code>&lt;p&gt;</code>
-            </dd>
-            <dt class="descriptionList__term"><code>&lt;b&gt;</code></dt>
-            <dd class="descriptionList__details">
-              ogrubienie tekstu - nie ma znaczenia semantycznego
-            </dd>
-            <dt class="descriptionList__term"><code>&lt;strong&gt;</code></dt>
-            <dd class="descriptionList__details">
-              pogrubienie - podkreśla wysoką istotność i poważność frazy w nim
-              zawartej. Ma znaczenie semantyczne.
-            </dd>
-            <dt class="descriptionList__term"><code>&lt;i&gt;</code></dt>
-            <dd class="descriptionList__details">
-              pochyla tekst - nie ma znaczenia semantycznego
-            </dd>
-            <dt class="descriptionList__term"><code>&lt;em&gt;</code></dt>
-            <dd class="descriptionList__details">
-              pochylenie - podkreśla, że tekst może mieć inne znaczenie (np.
-              ironia)
-            </dd>
-            <dt class="descriptionList__term"><code>&lt;a&gt;</code></dt>
-            <dd class="descriptionList__details">
-              link/łącze wewnątrz dokumentu
-              <code>&lt;a href="link-do-strony"&gt;opis łącza&lt;/a&gt;</code>
-            </dd>
             <dt class="descriptionList__term">
-              <code>&lt;element id='moj-identyfikator'&gt;</code>
+              <code>&lt;table&gt;</code>
             </dt>
             <dd class="descriptionList__details">
-              atrybut id - identyfikuje element(przydaje się w nawigacji
-              dokumentu, lub dowołaniu CSS do tego konkretnego elementu). Żeby
-              odwołać się w nawigacji do tego elementu wpisujemy:
-              <code
-                >&lt;a href="#moj-identyfikator"&gt;opis
-                elementu&lt;/a&gt;</code
-              >
+              znacznik informuję przeglądarkę, że jego zawartość to dane tabeli,
             </dd>
-            <dt class="descriptionList__term"><code>&lt;nav&gt;</code></dt>
+            <dt class="descriptionList__term">
+              <code>&lt;tr&gt;</code>
+            </dt>
             <dd class="descriptionList__details">
-              Nawigacja:Każdą treść, która jest powtarzalna na każdej
-              podstronie, wyrzucamy poza <code>&lt;main&gt;</code> (np. tag
-              <code>&lt;nav&gt;</code>). Wtedy algorytmy wyszukiwarek, czytników
-              wiedzą, że nie muszą tego analizować.
+              (table row – wiersz tabeli) – początek nowego wiersza tabeli,
             </dd>
-            <dt class="descriptionList__term"><code>&lt;img&gt;</code></dt>
+            <dt class="descriptionList__term">
+              <code>&lt;td&gt;</code>
+            </dt>
             <dd class="descriptionList__details">
-              obrazek:
-              <code>&lt;img src="link_do_obrazka" alt="tekst"&gt;</code>
-              atrybut alt oznacza informacje dla czytnika, wyszukiwarki co na na
-              danym obrazku się znajduje. Informuje również o tym odbiorce,
-              jeśli z jakiegoś powody ten obrazek by się nie wczytał.
+              (table data – dane tabeli) – komórka tabeli,
+            </dd>
+            <dt class="descriptionList__term">
+              <code>&lt;thead&gt;</code>
+            </dt>
+            <dd class="descriptionList__details">
+              nagłówek tabeli,
+            </dd>
+            <dt class="descriptionList__term">
+              <code>&lt;th&gt;</code>
+            </dt>
+            <dd class="descriptionList__details">
+              komórka w nagłówku tabeli,
+            </dd>
+            <dt class="descriptionList__term">
+              <code>&lt;tbody&gt;</code>
+            </dt>
+            <dd class="descriptionList__details">
+              główna zawartość tabeli,
+            </dd>
+            <dt class="descriptionList__term">
+              <code>&lt;caption&gt;</code>
+            </dt>
+            <dd class="descriptionList__details">
+              opis tabeli,
+            </dd>
+            <dt class="descriptionList__term">
+              <code>&lt;tfoot&gt;</code>
+            </dt>
+            <dd class="descriptionList__details">
+              stopka tabeli.
             </dd>
           </dl>
-          <a class="article__navigation" href="#week3">Do góry tygodnia</a>
-        </article>
-      </section>
-    </main>
 
-    <footer class="footer">
-      <p class="footer__desciption">
-        Mój pierwszy internetowy dziennik. Anno domini 2020 r.
-      </p>
-      <a class="footer__link" href="#main">Do góry strony</a>
-    </footer>
-  </body>
+          <p class="article__description">
+            Nie używamy tabel do budowania layoutów.
+          </p>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__desciption">
+      Mój pierwszy internetowy dziennik. Anno domini 2020 r.
+    </p>
+    <a class="footer__link" href="#main">Do góry strony</a>
+  </footer>
+</body>
+
 </html>

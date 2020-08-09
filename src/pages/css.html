@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS</title>
-  </head>
 
-  <body class="body">
-    <header class="header">
-      <nav class="navigation navigation--js">
-        <a class="navigation__link navigation__link--homepage" href="index.html"
-          >Strona główna</a
-        >
-        <a class="navigation__link" href="html.html">O HTML</a>
-        <a class="navigation__link" href="css.html">O CSS</a>
-        <a class="navigation__link" href="java-script.html">O JavaScript'cie</a>
-      </nav>
-      <button class="hamburger hamburger--js">MENU</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS</title>
+</head>
+
+<body class="body">
+  <header class="header">
+    <nav class="navigation navigation--js">
+      <a class="navigation__link navigation__link--homepage" href="index.html">Strona główna</a>
+      <a class="navigation__link" href="html.html">O HTML</a>
+      <a class="navigation__link" href="css.html">O CSS</a>
+      <a class="navigation__link" href="java-script.html">O JavaScript'cie</a>
+    </nav>
+    <button class="hamburger hamburger--js">MENU</button>
+  </header>
+
+  <main class="main" id="main">
+    <header>
+      <h1 class="main__header main__header--html">CSS</h1>
     </header>
 
-    <main class="main" id="main">
-      <header>
-        <h1 class="main__header main__header--html">CSS</h1>
-      </header>
+    <section class="section">
+      <h2 class="section__header section__header--notes">
+        Notatki z WTF: Co ten frontend?
+      </h2>
+      <p class="section__description section__description--html">
+        CSS czyli kaskadowy arkusz stylów (ang. Cascading Style Sheets)
+      </p>
+      <img class="section__picture section__picture--special" src="../assets/img/css.png" alt="logo" />
 
-      <section class="section">
-        <h2 class="section__header section__header--notes">
-          Notatki z WTF: Co ten frontend?
-        </h2>
-        <p class="section__description section__description--html">
-          CSS czyli kaskadowy arkusz stylów (ang. Cascading Style Sheets)
-        </p>
-        <img
-          class="section__picture section__picture--special"
-          src="../assets/img/css.png"
-          alt="logo"
-        />
+      <section class="week">
+        <h3 class="week__heading" id="week2">
+          Tydzień II 20.04.-26.04.2020 r.
+        </h3>
+        <article class="article">
 
-        <section class="week">
-          <h3 class="week__heading" id="week2">
-            Tydzień II 20.04.-26.04.2020 r.
-          </h3>
-          <p class="week__description">
+          <h4 class="article__title">Wprowadzenie do stylowania</h4>
+
+          <p class="article__description">
             W tym tygodniu poznaliśmy, że CSS odpowiada za prezentacje
             dokumentu. Tag <code>&lt;style&gt;</code>, który odpowiada za CSS
             umieszczamy w sekcji <code>&lt;head&gt;</code>. Innym sposobem jest
@@ -49,10 +48,8 @@
             przejrzystości kodu w dokumencie. Możemy to zapisać za pomocą
             komendy:
           </p>
-          <code
-            >&lt;link href="style.css" rel="stylesheet"
-            type="text/css"&gt;</code
-          >
+          <code>&lt;link href="style.css" rel="stylesheet"
+            type="text/css"&gt;</code>
           <dl class="descriptionList">
             <dt class="descriptionList__item"><code>&lt;link&gt;</code></dt>
             <dd class="descriptionList__details">
@@ -61,7 +58,7 @@
               komendę w sekcji <code>&lt;head&gt;</code>
             </dd>
           </dl>
-          <p class="week__description">
+          <p class="article__description">
             Dane własności, które chcemy zmienić w dokumencie poprzez CSS,
             zapisujemy:
           </p>
@@ -70,7 +67,7 @@
             właściwość: wartość;<br />
             &rcub;
           </code>
-          <p class="week__description">
+          <p class="article__description">
             Poznane właściwości w tym tygodniu to:
           </p>
           <dl class="descriptionList">
@@ -79,23 +76,24 @@
             <dt class="descriptionList__item"><code>background</code>:</dt>
             <dd class="descriptionList__details">zmienia kolor tła</dd>
           </dl>
-        </section>
+        </article>
+      </section>
 
-        <section class="week" id="week3">
-          <h3 class="week__heading">Tydzień III 27.04.-02.05.2020 r.</h3>
+      <section class="week" id="week3">
+        <h3 class="week__heading">Tydzień III 27.04.-02.05.2020 r.</h3>
 
-          <p class="week__description">
+        <article class="article">
+          <h4 class="article__title">WTF: CSS II</h4>
+          <p class="article__description">
             Wygląd dokumentu możemy zmieniać również poprzez atrybut style
             umieszczony bezpośrednio w tagu. Nazywamy go stylem inline
             (liniowy). Zapisujemy go w następujący sposób:
           </p>
 
-          <code
-            >&lt;znacznik style="właściwość:
-            wartość;"&gt;treść&lt;/znacznik&gt;</code
-          >
+          <code>&lt;znacznik style="właściwość:
+            wartość;"&gt;treść&lt;/znacznik&gt;</code>
 
-          <p class="week__description">
+          <p class="article__description">
             Zmienianie własności CSS możliwe jest poprzez:
           </p>
 
@@ -136,7 +134,7 @@
             </dd>
           </dl>
 
-          <p class="week__description">
+          <p class="article__description">
             Jeśli chcemy zmienić właściwości danego elementu strony bez
             nadawania mu klasy lub identyfikatora (np. chcemy żeby odnośniki w
             <code>&lt;nav&gt;</code> były innego koloru niż na reszcie strony)
@@ -149,11 +147,11 @@
             &rcub;
           </code>
 
-          <p class="week__description">
+          <p class="article__description">
             Dzięki temu będzie możliwe zmienienie koloru odnośników
             <code>&lt;a&gt</code>; tylko w nawigacji <code>&lt;nav&gt</code>;
           </p>
-          <p class="week__description">
+          <p class="article__description">
             Kiedy do wartości dla danego selektora dopiszemy po spacji
             !important, spowodujemy, że będzie ona stosowana jako pierwsza pod
             uwagę.
@@ -170,41 +168,44 @@
             <li class="list__item">.name</li>
             <li class="list__item">element</li>
           </ol>
-          <p class="week__description">
+          <p class="article__description">
             Żeby uniknąć problemów, z specyficznością stylów najlepiej stosować
             klasy. Unikniemy wtedy potrzebę przeliczania, żeby dowiedzieć się
             jaki styl otrzyma dany element
           </p>
-        </section>
+        </article>
+      </section>
 
-        <section class="week">
-          <h2 class="week__heading">
-            Tydzień IV 04.05.-10.05.2020 r.
-          </h2>
-          <article class="article">
-            <h4 class="article__title">Życie w pudełku</h4>
-            <p class="article__description">Display</p>
-            <p class="article__description">
+      <section class="week">
+        <h2 class="week__heading">
+          Tydzień IV 04.05.-10.05.2020 r.
+        </h2>
+        <article class="article">
+          <h4 class="article__title">Życie w pudełku</h4>
+
+          <section class="article-section">
+            <h5 class="article-section__description">Display</h5>
+            <p class="article-section__description">
               Strony internetowe są tworzone dla dwu wymiarowych wyświetlaczy.
               Co się z tym wiąże, to sposób projektowania strony. Na początek
               poznajemy własność:
             </p>
             <dl class="descriptionList">
               <dt class="descriptionList__term">
-                display: block
+                <code>display: block</code>
               </dt>
               <dd class="descriptionList__details">
                 elementy ustawiają się jeden pod drugim,
               </dd>
               <dt class="descriptionList__term">
-                display: inline
+                <code>display: inline</code>
               </dt>
               <dd class="descriptionList__details">
                 elementy ustaiwają się obok siebie. Nie mogą mieć zdefiniowanej
                 wysokości i szerokości,
               </dd>
               <dt class="descriptionList__term">
-                display: inline-block
+                <code>display: inline-block</code>
               </dt>
               <dd class="descriptionList__details">
                 własność specjalna, łączy w sobie dwie rzeczy. Zachowuje się jak
@@ -212,39 +213,39 @@
                 elementom liniowym, a są dostępne dla elementów blokowych.
               </dd>
               <dt class="descriptionList__term">
-                widht / height
+                <code>widht / height</code>
               </dt>
               <dd class="descriptionList__details">
                 szerokość / wysokość.
               </dd>
               <dt class="descriptionList__term">
-                max-width / max-height
+                <code>max-width / max-height</code>
               </dt>
               <dd class="descriptionList__details">
                 nie ma sztywnej wysokości / szerokości, tylko wymiar maksymalny.
               </dd>
               <dt class="descriptionList__term">
-                min-width / min-height
+                <code>min-width / min-height</code>
               </dt>
               <dd class="descriptionList__details">
                 element nie będzie mniejszy niż zadana wartość.
               </dd>
               <dt class="descriptionList__term">
-                overflow: hidden
+                <code>overflow: hidden</code>
               </dt>
               <dd class="descriptionList__details">
                 pozwala na odcięcie tej treści, która występuje poza wielkość
                 kontenera. Odcięta treść nie będzie widoczna.
               </dd>
               <dt class="descriptionList__term">
-                overflow: visible
+                <code>overflow: visible</code>
               </dt>
               <dd class="descriptiomList__details">
                 domyślna wartość, powoduje, że odcięta treść wystaje poza
                 kontener i jest widoczna.
               </dd>
               <dt class="descriptionList__term">
-                overflow: auto
+                <code>overflow: auto</code>
               </dt>
               <dd class="descriptionList__details">
                 dodaje nam scroll dzięki, któremu możemy przewijać zawartość
@@ -252,9 +253,11 @@
                 nie wychodzi poza kontener.
               </dd>
             </dl>
+          </section>
 
-            <p class="article__description">Jednostki</p>
-            <p class="article__description">
+          <section class="article-section">
+            <h5 class="article-section__description">Jednostki</h5>
+            <p class="article-section__description">
               Jednostki stosowane w własnościach CSS’owych to przede wszystkim:
             </p>
             <ul class="list">
@@ -265,53 +268,55 @@
                 procenty (%) np. 60%,
               </li>
             </ul>
-            <p class="article__description">
+            <p class="article-section__description">
               Ponieważ w forntendzie definiując szerokość i wysokość elementu
               nie jesteśmy wstanie przewidzieć ilości treści i boxy muszą się
               przesuwać to wprowadzono następujące jednostki:
             </p>
             <dl class="descriptionList">
               <dt class="descriptionList__term">
-                viewport width (vw)
+                <code>viewport width (vw)</code>
               </dt>
               <dd class="descriptionList__details">
                 określa szerokość elementu w procentach, względem całego okna
                 np. 60vw,
               </dd>
               <dt class="descriptionList__term">
-                viewport height (vh)
+                <code>viewport height (vh)</code>
               </dt>
               <dd class="descriptionList__details">
                 analogicznie jak dla wysokości.
               </dd>
             </dl>
+          </section>
 
-            <p class="article__description">
+          <section class="article-section">
+            <h5 class="article-section__description">
               Box Model – fundament budowy layout’u strony inernetowej.
-            </p>
+            </h5>
             <dl class="descriptionList">
               <dt class="descriptionList__term">
-                padding
+                <code>padding</code>
               </dt>
               <dd class="descriptionList__details">
                 wewnętrzny margines – określa o ile zawartość ma być odsunięta
                 od wewnętrznej granicy pudełka,
               </dd>
               <dt class="descriptionList__term">
-                border
+                <code>border</code>
               </dt>
               <dd class="descriptionList__details">
                 określa ramkę wokół elementu:
               </dd>
               <dt class="descriptionList__term">
-                border-width:
+                <code>border-width:</code>
               </dt>
               <dd class="descriptionList__details">
                 szerokość ramki, o border-style: - rodzaj ramki (solid – ciągła,
                 dashed – wykreskowana, dotted – wykropkowana),
               </dd>
               <dt class="descriptionList__term">
-                border-radius: 10px;
+                <code>border-radius: 10px;</code>
               </dt>
               <dd class="descriptionList__details">
                 własność pozwala na zaokrąglenie rami (obramowania) 10px określa
@@ -321,18 +326,20 @@
                 zastosować odpowiedniej wielkości padding.
               </dd>
               <dt class="descriptionList__term">
-                margin
+                <code>margin</code>
               </dt>
               <dd class="descriptionList__details">
                 margines określa, o ile odsuwamy element od innych elementów i
                 działa tylko przy elementach blokowych.
               </dd>
             </dl>
+          </section>
 
-            <p class="article__description">Box-sizing</p>
+          <section class="article-section">
+            <h5 class="article-section__description">Box-sizing</h5>
             <dl class="descriptionList">
               <dt class="descriptionList__term">
-                box-sizing: content-box;
+                <code>box-sizing: content-box;</code>
               </dt>
               <dd class="descriptionList__details">
                 domyślna wielkość. Mowi ona nam, że jeśli zdefiniujemy sobie
@@ -341,7 +348,7 @@
                 szerszy,
               </dd>
               <dt class="descriptionList__term">
-                box-sizing: border-box
+                <code>box-sizing: border-box</code>
               </dt>
               <dd class="descriptionList__details">
                 przy takim zapisie szerokość i wysokość odnoszą się do całego
@@ -351,9 +358,11 @@
                 uwzględnieniem ramki (czyli wszystkiego co należy do elementu).
               </dd>
             </dl>
+          </section>
 
-            <p class="article__description">Position</p>
-            <p class="article__description">
+          <section class="article-section">
+            <h5 class="article-section__description">Position</h5>
+            <p class="article-section__description">
               Positon – pozwala na pozycjonowanie elementów w naszej przestrzeni
               nie tylko za pomocą narzuconych nam przez przeglądarkę układom.
               Dzięki tej funkcji możemy powiedzieć przeglądarce, że w tym i tym
@@ -362,19 +371,19 @@
             </p>
             <dl class="descriptionList">
               <dt class="descriptionList__term">
-                position: relative;
+                <code>position: relative;</code>
               </dt>
               <dd class="descriptionList__details">
                 element zależny od pozycji absolute,
               </dd>
               <dt class="descriptionList__term">
-                position: absolute;
+                <code>position: absolute;</code>
               </dt>
               <dd class="descriptionList__details">
                 określa dokładne położenie elementu
               </dd>
               <dt class="descriptionList__term">
-                position: fixed;
+                <code>position: fixed;</code>
               </dt>
               <dd class="descriptionList__details">
                 ma podobne właściwości jak absolute, tylko jest zawsze
@@ -382,7 +391,7 @@
                 Często stosowany jest dla strony,
               </dd>
               <dt class="descriptionList__term">
-                position: sticky
+                <code>position: sticky</code>
               </dt>
               <dd class="descriptionList__details">
                 element na oczątku jest na swoim miejscu, ale gdy scrollujemy
@@ -394,69 +403,73 @@
                 sekcji.
               </dd>
             </dl>
+          </section>
 
-            <p class="article__description">Float</p>
-            <p class="article__description">
+          <section class="article-section">
+            <h5 class="article-section__description">Float</h5>
+            <p class="article-section__description">
               Float służy do opływania elementów. Nie jest ograniczony, tzn.
               jest zakotwiczony w treści.
             </p>
-          </article>
+          </section>
+        </article>
 
-          <article class="article">
-            <h3 class="article__title">
-              BEM Block – Element – Modifier
-            </h3>
-            <p class="article__description">
-              Dlaczego stworzono BEM?
-            </p>
-            <ul class="list">
-              <li class="list__item">
-                Świat stylowania doszedł do wysokiego stopnia skomplikowania
-                (specyficzność).
-              </li>
-              <li class="list__item">
-                Problem z logicznym nazwaniem klas.
-              </li>
-              <li class="list__item">
-                Brak ujednoliconego sposobu stylowania.
-              </li>
-              <li class="list__item">
-                Importanty, nadpisywanie rzeczy.
-              </li>
-              <li class="list__item">
-                Brak odwzorowania struktury HTML w CSS.
-              </li>
-              <li class="list__item">
-                Stylowanie kilkoma klasami, powtarzające się nazwy.
-              </li>
-            </ul>
-            <p class="article__description">
-              Dlatego:
-            </p>
-            <ul class="list">
-              <li class="list__item">
-                Szukamy elementów na stronie i dzielimy je na bloki (np.
-                nawigacje, artykuły).
-              </li>
-              <li class="list__item">
-                Myślimy o elementach składowych (robimy analizę, selekcję).
-              </li>
-              <li class="list__item">
-                Tworzymy dwie klasy jeśli element ma modyfikator (w
-                modyfikatorze zmieniamy tylko unikalne dla niego wartości, nie
-                przepisujemy rzeczy z klasy bazowej).
-              </li>
-            </ul>
-          </article>
-        </section>
+        <article class="article">
+          <h3 class="article__title">
+            BEM Block – Element – Modifier
+          </h3>
+          <p class="article__description">
+            Dlaczego stworzono BEM?
+          </p>
+          <ul class="list">
+            <li class="list__item">
+              Świat stylowania doszedł do wysokiego stopnia skomplikowania
+              (specyficzność).
+            </li>
+            <li class="list__item">
+              Problem z logicznym nazwaniem klas.
+            </li>
+            <li class="list__item">
+              Brak ujednoliconego sposobu stylowania.
+            </li>
+            <li class="list__item">
+              Importanty, nadpisywanie rzeczy.
+            </li>
+            <li class="list__item">
+              Brak odwzorowania struktury HTML w CSS.
+            </li>
+            <li class="list__item">
+              Stylowanie kilkoma klasami, powtarzające się nazwy.
+            </li>
+          </ul>
+          <p class="article__description">
+            Dlatego:
+          </p>
+          <ul class="list">
+            <li class="list__item">
+              Szukamy elementów na stronie i dzielimy je na bloki (np.
+              nawigacje, artykuły).
+            </li>
+            <li class="list__item">
+              Myślimy o elementach składowych (robimy analizę, selekcję).
+            </li>
+            <li class="list__item">
+              Tworzymy dwie klasy jeśli element ma modyfikator (w
+              modyfikatorze zmieniamy tylko unikalne dla niego wartości, nie
+              przepisujemy rzeczy z klasy bazowej).
+            </li>
+          </ul>
+        </article>
       </section>
-    </main>
+    </section>
+  </main>
 
-    <footer class="footer">
-      <p class="footer__desciption">
-        Mój pierwszy internetowy dziennik. Anno domini 2020 r.
-      </p>
-      <a class="footer__link" href="#main">Do góry strony</a>
-    </footer>
-  </body>
+  <footer class="footer">
+    <p class="footer__desciption">
+      Mój pierwszy internetowy dziennik. Anno domini 2020 r.
+    </p>
+    <a class="footer__link" href="#main">Do góry strony</a>
+  </footer>
+</body>
+
 </html>

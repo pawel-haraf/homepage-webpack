@@ -47,6 +47,9 @@ html {
     color: #222222;
     text-align: justify;
     align-self: flex-start;
+    &--special{
+      padding-left: 30px;
+    }
   }
   &__navigation {
     background: #fff;
@@ -81,6 +84,18 @@ html {
   .article {
     width: 70vw;
   }
+}
+
+.code--special {
+  padding-left: 15px;
+}
+
+.code--special2 {
+  padding-left: 30px;
+}
+
+.code--special3 {
+  padding-left: 45px;
 }
 
 .descriptionList {
