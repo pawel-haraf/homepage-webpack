@@ -189,6 +189,206 @@
           </section>
         </article>
       </section>
+
+      <section class="week">
+        <h3 class="week__heading">Tydzień V 11.05-17.05.20 r.</h3>
+
+        <article class="article">
+          <h4 class="article__title">JS: funkcje</h4>
+
+          <p class="article__description">
+            Funkcja składa się z serii poleceń zgrupowanych ze sobą i przeznaczonych do wykonywania określonego zadania.
+          </p>
+
+          <code>
+            function calculate(myNumber){<br>
+            return myNumber*7;<br>
+            }
+          </code>
+
+          <p class="article__description">
+            Wyżej zapisana funkcja zwraca nam rozwiązanie funkcji <code>f(x)=x∙7</code>.Na razie nie zadzieje się nic
+            przy takim zapisie. Nie jest ona nigdzie wywołana. Dopiero jak wpiszemy: <code>calculate(1)</code>, to
+            dostaniemy wynik z działania. Żeby wyświetlić wynik z działania funkcji zapisujemy:
+          </p>
+
+          <code>
+            const myResult=calculate(1);<br>
+            console.log(myResult);
+          </code>
+
+          <p class="article__description">
+            Jeśli do funkcji dopiszemy <code>console.log(`Dostałem: ${myNumber}`);</code>, to w konsoli otrzymamy:
+            <code>Dostałem: 1</code>
+          </p>
+
+          <p class="article__description">
+            Funkcje piszemy po to, żeby zautomatyzować czynności (np. gdy daną rzecz trzeba kilka razu wykonać w
+            kodzie).
+          </p>
+
+          <p class="article__description">
+            Funkcje w JS:
+          </p>
+
+          <ol class="list">
+            <li class="list__item">
+              Deklarujemy nazwę funkcji (nie zawsze),
+            </li>
+
+            <li class="list__item">
+              W środku dokonujemy obliczeń (wykonujemy zadania),
+            </li>
+
+            <li class="list__item">
+              Funkcja przyjmuje argumenty (ale nie musi),
+            </li>
+
+            <li class="list__item">
+              Funkcja zwraca zawsze coś ( nawet jeśli nie mamy return – wtedy funkcja zwraca undefined).
+            </li>
+          </ol>
+
+          <p class="article__description">
+            Funkcje: Kiedy i dlaczego stosujemy?
+          </p>
+
+          <ul class="list">
+            <li class="list__item">
+              Deklarujemy kod, który się powtarza <strong>(zasada DRY – don’t repeat yourself),</strong>
+            </li>
+
+            <li class="list__item">
+              Zwiększamy czytelność kodu,
+            </li>
+
+            <li class="list__item">
+              Łatwiejsze szukanie błędów,
+            </li>
+
+            <li class="list__item">
+              Odpowiedzialność za wykonanie zadania w jednym miejscu
+            </li>
+          </ul>
+          <p class="article__description">
+            Istnie również skrócony zapis funkcji w JS, tzw. (Fat) arrow functions (=>)
+          </p>
+
+          <code>
+            const calculate = (myNumber) => {<br>
+              myNumber=mynumber+3;,<br>
+              console.log(myNumber);<br>
+              return myNumber*7;<br>
+              }
+          </code>
+
+          <p class="article__description">
+            Wtedy wyświeli się nam rozwiązanie funkcji: <code>calculate(2); //35</code>
+          </p>
+
+          <p class="article__description">
+            Możliwy jest też jeszcze krótszy zapis:
+          </p>
+
+          <code>
+            const calculate = (myNumber) => myNumber*7;
+          </code>
+
+          <p class="article__description">
+            (Fat) arrow function:
+          </p>
+
+          <ul class="list">
+            <li class="list__item">
+              skraca zapis deklaracji funkcji,
+            </li>
+
+            <li class="list__item">
+              zwiększa czytelność (dyskusyjne),
+            </li>
+
+            <li class="list__item">
+              nie tworzy nowego kontekstu this, nie ma dostępu do arguments i super,
+            </li>
+
+            <li class="list__item">
+              nie jest zamiennikiem „tradycyjnej” funkcji (ale w większości przypadków nie zobaczymy różnicy).
+            </li>
+          </ul>
+        </article>
+
+        <article class="article">
+          <h4 class="article__title">
+            JS: obiekt
+          </h4>
+
+          <p class="article__description">
+            Obiekt jest strukturą danych. W obiekcie zmienne nazywamy własnościami (property), a funkcje to metody
+            (methods).<br>
+            Przykładowy obiekt:
+          </p>
+
+          <code>
+            const deathStar = {<br>
+              diameter: 120000,<br>
+              fire: (target) => {<br>
+              console.log(`${target} destroyed 💥`)<br>
+              },<br>
+              isOperating: true,<br>
+              levels: 357,<br>
+              name: 'Death Star',<br>
+              population: 10000,<br>
+            }
+          </code>
+
+          <code>
+            const obiekt = {<br>
+              klucz: wartość,<br>
+            }
+          </code>
+
+          <dl class="descriptionList">
+            <dt class="descriptionList__term">
+              klucz
+            </dt>
+
+            <dd class="descriptionList__details">
+              jest unikalny w ramach obiektu,
+            </dd>
+
+            <dt class="descriptionList__term">
+              wartość
+            </dt>
+
+            <dd class="descriptionList__details">
+              to prymitywy, funkcje, zagnieżdżenia.
+            </dd>
+          </dl>
+
+          <p class="article__description">
+            Żeby wywołać w kodzie interesujący nas klucz z obiektu stosujemy „.” (dot notation), czyli zapisujemy to
+            odwołanie jako: <code>nazwaObiektu.klucz;</code>.<br>
+            Innym sposobem do odwołania się do własności obiektu (ale nie jego metod) jest
+            <code>bracket notation []</code>. Czyli <code>nazwaObiektu[‘klucz’];</code>.
+          </p>
+        </article>
+
+        <article class="article">
+          <h4 class="article__title">JS: Immutablility w obiektach (niemutowalność)</h4>
+
+          <p class="article__description">
+            Dla przypomnienia: nie możemy zmieniać wartości primitive values w JS. To co zmieniamy to połączenie między
+            nimi, a zmiennymi.<br>
+            Połączenie do obiektu dla const jest sztywne, ale w obiekcie, dalsze połączenia do wartości są zmienne.
+            Czyli z tego wynika, że obiekty złożone mogą mieć przypisane różne własności do wartości, a obiekty proste
+            dla const są stałe.<br>
+            Obiekty tworzymy w przeciwieństwie do wartości, do których się podłączamy.<br>
+            W obiektach, gdy odwołujemy się do obiektu zagnieżdżonego w innym obiekcie, to przy zmianie właściwości
+            obiektu zagnieżdżonego nie zmieniamy połączenia do tego obiektu. Skutkuje to tym, że i w tym obiekcie będą
+            wyświetlane zmienione odwołania do wartości.
+          </p>
+        </article>
+      </section>
     </section>
   </main>
 
